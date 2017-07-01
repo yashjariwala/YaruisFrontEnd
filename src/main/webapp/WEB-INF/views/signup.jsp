@@ -37,41 +37,38 @@ body {
 </style>
 
 <script>
+	function FillBilling(f) {
+		confirm("All The values of the shipping address will be copied to the billing address!");
+		var n1 = document.getElementById('n1');
+		var n2 = document.getElementById('n2');
+		var n3 = document.getElementById('n3');
+		var n4 = document.getElementById('n4');
+		var n5 = document.getElementById('n5');
+		var n6 = document.getElementById('n6');
+		var n7 = document.getElementById('n7');
+		var n8 = document.getElementById('n8');
 
+		var n9 = document.getElementById('n9');
+		var n10 = document.getElementById('n10');
+		var n11 = document.getElementById('n11');
+		var n12 = document.getElementById('n12');
+		var n13 = document.getElementById('n13');
+		var n14 = document.getElementById('n14');
+		var n15 = document.getElementById('n15');
+		var n16 = document.getElementById('n16');
 
-function FillBilling(f) {
-	  var n1 = document.getElementById('n1');
-	  var n2 = document.getElementById('n2');
-	  var n3 = document.getElementById('n3');
-	  var n4 = document.getElementById('n4');
-	  var n5 = document.getElementById('n5');
-	  var n6 = document.getElementById('n6');
-	  var n7 = document.getElementById('n7');
-	  var n8 = document.getElementById('n8');
-	 
-	  var n9 = document.getElementById('n9');
-	  var n10 = document.getElementById('n10');
-	  var n11 = document.getElementById('n11');
-	  var n12 = document.getElementById('n12');
-	  var n13 = document.getElementById('n13');
-	  var n14 = document.getElementById('n14');
-	  var n15 = document.getElementById('n15');
-	  var n16 = document.getElementById('n16');
+		if (f.billingtoo.checked == true) {
+			f.n9.value = f.n1.value;
+			f.n10.value = f.n2.value;
+			f.n11.value = f.n3.value;
+			f.n12.value = f.n4.value;
+			f.n13.value = f.n5.value;
+			f.n14.value = f.n6.value;
+			f.n15.value = f.n7.value;
+			f.n16.value = f.n8.value;
 
-	
-	  if(f.billingtoo.checked == true) {
-	    f.n9.value = f.n1.value;
-	    f.n10.value = f.n2.value;
-	    f.n11.value = f.n3.value;
-	    f.n12.value = f.n4.value;
-	    f.n13.value = f.n5.value;
-	    f.n14.value = f.n6.value;
-	    f.n15.value = f.n7.value;
-	    f.n16.value = f.n8.value;
-	 
-	  }
+		}
 	}
-
 </script>
 
 
@@ -79,20 +76,50 @@ function FillBilling(f) {
 	<%@include file="shared/Header.jsp"%>
 
 
-	<!--content-->
-	<div class="content">
-		<!--login-->
-		<div class="login">
+	<br>
+	<br>
+
+	<div class="container">
+		<div class="row form-group">
+			<div class="col-xs-12">
+				<ul class="nav nav-pills nav-justified thumbnail setup-panel">
+					<li class="active"><a href="#step-1">
+							<h4 class="list-group-item-heading">Step 1</h4>
+							<p class="list-group-item-text">Basic Details</p>
+					</a></li>
+					<li class="disabled"><a href="#step-2">
+							<h4 class="list-group-item-heading">Step 2</h4>
+							<p class="list-group-item-text">Shipping Address</p>
+					</a></li>
+					<li class="disabled"><a href="#step-3">
+							<h4 class="list-group-item-heading">Step 3</h4>
+							<p class="list-group-item-text">Billing Address</p>
+					</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="row setup-content" id="step-1">
+		<div class="col-xs-12">
 			<div class="main-agileits">
 				<div class="form-w3agile form1">
-					<h3>Register</h3>
-					<div class="forg">
-						<a href="<c:url value='/Login'/>" class="forg-right">Already
-							an User? Login</a>
-					</div>
+					<h3>Basic Deatils</h3>
+
+					<!-- <form> -->
+
+
 					<c:url var="addAction" value="/Register/add"></c:url>
 					<form:form action="saveuser" commandName="Userdata">
-	
+
+						<div class="forg">
+							<a href="<c:url value='/Login'/>" class="forg-right">Already
+								an User? Login</a>
+						</div>
+
 						<form:label path="username">Name</form:label>
 						<br>
 						<span style="color: #ff0000">${nameMsg} <form:errors
@@ -134,157 +161,262 @@ function FillBilling(f) {
 							<div class="clearfix"></div>
 						</div>
 						<br>
-						
-						
-						<!--shipping address -->
+
+						<button id="activate-step-2" class="btn btn-primary btn-md"
+							onclick="topFunction()">Shipping Address</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 	<div class="container"> -->
+
+	<div class="row setup-content" id="step-2">
+		<div class="col-xs-12">
+
+			<div class="main-agileits">
+				<div class="form-w3agile form1">
 
 
-						<h3>Shipping Address</h3>
 
-						<form:label path="shippingAddress.flatno">Flat No</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
-							<form:input type="text" path="shippingAddress.flatno"
-								id="n1" />
-							<div class="clearfix"></div>
-						</div>
-						<form:label path="shippingAddress.buildingname">Building Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-bookmark" aria-hidden="true"></i>
-							<form:input path="shippingAddress.buildingname" id="n2" />
-							<div class="clearfix"></div>
-						</div>
+					<h3>Shipping Address</h3>
 
-						<form:label path="shippingAddress.localityname">Locality Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-road" aria-hidden="true"></i>
-							<form:input path="shippingAddress.localityname" id="n3" />
-							<div class="clearfix"></div>
-						</div>
+					<form:label path="shippingAddress.flatno">Flat No</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
+						<form:input type="text" path="shippingAddress.flatno" id="n1" />
+						<div class="clearfix"></div>
+					</div>
+					<form:label path="shippingAddress.buildingname">Building Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-bookmark" aria-hidden="true"></i>
+						<form:input path="shippingAddress.buildingname" id="n2" />
+						<div class="clearfix"></div>
+					</div>
 
-						<form:label path="shippingAddress.landmark">Landmark</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-picture" aria-hidden="true"></i>
-							<form:input type="text" path="shippingAddress.landmark" id="n4" />
-							<div class="clearfix"></div>
-						</div>
+					<form:label path="shippingAddress.localityname">Locality Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-road" aria-hidden="true"></i>
+						<form:input path="shippingAddress.localityname" id="n3" />
+						<div class="clearfix"></div>
+					</div>
 
-						<form:label path="shippingAddress.cityname">City Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
-							<form:input path="shippingAddress.cityname" id="n5" />
-							<div class="clearfix"></div>
-						</div>
+					<form:label path="shippingAddress.landmark">Landmark</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-picture" aria-hidden="true"></i>
+						<form:input type="text" path="shippingAddress.landmark" id="n4" />
+						<div class="clearfix"></div>
+					</div>
 
-						<form:label path="shippingAddress.statename">State Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
-							<form:input path="shippingAddress.statename" id="n6" />
-							<div class="clearfix"></div>
-						</div>
+					<form:label path="shippingAddress.cityname">City Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
+						<form:input path="shippingAddress.cityname" id="n5" />
+						<div class="clearfix"></div>
+					</div>
 
-
-						<form:label path="shippingAddress.countryname">Country Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-globe" aria-hidden="true"></i>
-							<form:input path="shippingAddress.countryname" id="n7" />
-							<div class="clearfix"></div>
-						</div>
+					<form:label path="shippingAddress.statename">State Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
+						<form:input path="shippingAddress.statename" id="n6" />
+						<div class="clearfix"></div>
+					</div>
 
 
-						<form:label path="shippingAddress.zipcode">Zip Code</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
-							<form:input path="shippingAddress.zipcode" id="n8" />
-							<div class="clearfix"></div>
-						</div>
-
-						
-						
-						<br>
-						<input type="checkbox" name="billingtoo"
-							onclick="FillBilling(this.form)">
-						<em>Check this box if Shipping Address and Billing Address
-							are the same.</em>
-						<br>
-						<br>
-						<br>
-						
-						
-						
-						<!--billing address -->
-						<h3>Billing Address</h3>
-						<form:label path="billingAddress.flatno">Flat No</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
-							<form:input type="text" path="billingAddress.flatno"
-								id="n9"  />
-							<div class="clearfix"></div>
-						</div>
-						<form:label path="billingAddress.buildingname">Building Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-bookmark" aria-hidden="true"></i>
-							<form:input path="billingAddress.buildingname" id="n10" />
-							<div class="clearfix"></div>
-						</div>
-
-						<form:label path="billingAddress.localityname">Locality Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-road" aria-hidden="true"></i>
-							<form:input path="billingAddress.localityname" id="n11" />
-							<div class="clearfix"></div>
-						</div>
-
-						<form:label path="billingAddress.landmark">Landmark</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-picture" aria-hidden="true"></i>
-							<form:input type="text" path="billingAddress.landmark" id="n12"/>
-							<div class="clearfix"></div>
-						</div>
-
-						<form:label path="billingAddress.cityname">City Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
-							<form:input path="billingAddress.cityname" id="n13" />
-							<div class="clearfix"></div>
-						</div>
-
-						<form:label path="billingAddress.statename">State Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
-							<form:input path="billingAddress.statename" id="n14" />
-							<div class="clearfix"></div>
-						</div>
+					<form:label path="shippingAddress.countryname">Country Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-globe" aria-hidden="true"></i>
+						<form:input path="shippingAddress.countryname" id="n7" />
+						<div class="clearfix"></div>
+					</div>
 
 
-						<form:label path="billingAddress.countryname">Country Name</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-globe" aria-hidden="true"></i>
-							<form:input path="billingAddress.countryname" id="n15"/>
-							<div class="clearfix"></div>
-						</div>
+					<form:label path="shippingAddress.zipcode">Zip Code</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
+						<form:input path="shippingAddress.zipcode" id="n8" />
+						<div class="clearfix"></div>
+					</div>
 
 
-						<form:label path="billingAddress.zipcode">Zip Code</form:label>
-						<div class="key">
-							<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
-							<form:input path="billingAddress.zipcode" id="n16"/>
-							<div class="clearfix"></div>
-						</div>
-						<br>
-						
 
-						<input type="submit" value="Submit">
+					<br> <input type="checkbox" name="billingtoo"
+						onclick="FillBilling(this.form)"> <em>Check this box
+						if Shipping Address and Billing Address are the same.</em> <br> <br>
+					<br>
+
+
+					<button id="activate-step-3" class="btn btn-primary btn-md"
+						onclick="topFunction()">Billing Address</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- 			<div class="container"> -->
+
+	<div class="row setup-content" id="step-3">
+		<div class="col-xs-12">
+			<div class="main-agileits">
+				<div class="form-w3agile form1">
+
+
+					<!--billing address -->
+					<h3>Billing Address</h3>
+
+
+
+					<form:label path="billingAddress.flatno">Flat No</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
+						<form:input type="text" path="billingAddress.flatno" id="n9" />
+						<div class="clearfix"></div>
+					</div>
+					<form:label path="billingAddress.buildingname">Building Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-bookmark" aria-hidden="true"></i>
+						<form:input path="billingAddress.buildingname" id="n10" />
+						<div class="clearfix"></div>
+					</div>
+
+					<form:label path="billingAddress.localityname">Locality Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-road" aria-hidden="true"></i>
+						<form:input path="billingAddress.localityname" id="n11" />
+						<div class="clearfix"></div>
+					</div>
+
+					<form:label path="billingAddress.landmark">Landmark</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-picture" aria-hidden="true"></i>
+						<form:input type="text" path="billingAddress.landmark" id="n12" />
+						<div class="clearfix"></div>
+					</div>
+
+					<form:label path="billingAddress.cityname">City Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
+						<form:input path="billingAddress.cityname" id="n13" />
+						<div class="clearfix"></div>
+					</div>
+
+					<form:label path="billingAddress.statename">State Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-screenshot" aria-hidden="true"></i>
+						<form:input path="billingAddress.statename" id="n14" />
+						<div class="clearfix"></div>
+					</div>
+
+
+					<form:label path="billingAddress.countryname">Country Name</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-globe" aria-hidden="true"></i>
+						<form:input path="billingAddress.countryname" id="n15" />
+						<div class="clearfix"></div>
+					</div>
+
+
+					<form:label path="billingAddress.zipcode">Zip Code</form:label>
+					<div class="key">
+						<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
+						<form:input path="billingAddress.zipcode" id="n16" />
+						<div class="clearfix"></div>
+					</div>
+					<br> <input type="submit" value="Submit">
 					</form:form>
 				</div>
 			</div>
 		</div>
-		<!--login-->
+
 	</div>
 
-	<!--content-->
+	<script>
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
 
+		// Activate Next Step
 
+		$(document)
+				.ready(
+						function() {
+
+							var navListItems = $('ul.setup-panel li a'), allWells = $('.setup-content');
+
+							allWells.hide();
+
+							navListItems
+									.click(function(e) {
+										e.preventDefault();
+										var $target = $($(this).attr('href')), $item = $(
+												this).closest('li');
+
+										if (!$item.hasClass('disabled')) {
+											navListItems.closest('li')
+													.removeClass('active');
+											$item.addClass('active');
+											allWells.hide();
+											$target.show();
+										}
+									});
+
+							$('ul.setup-panel li.active a').trigger('click');
+
+							// DEMO ONLY //
+							$('#activate-step-2')
+									.on(
+											'click',
+											function(e) {
+												$('ul.setup-panel li:eq(1)')
+														.removeClass('disabled');
+												$(
+														'ul.setup-panel li a[href="#step-2"]')
+														.trigger('click');
+												$(this).remove();
+											})
+
+							$('#activate-step-3')
+									.on(
+											'click',
+											function(e) {
+												$('ul.setup-panel li:eq(2)')
+														.removeClass('disabled');
+												$(
+														'ul.setup-panel li a[href="#step-3"]')
+														.trigger('click');
+												$(this).remove();
+											})
+
+							$('#activate-step-4')
+									.on(
+											'click',
+											function(e) {
+												$('ul.setup-panel li:eq(3)')
+														.removeClass('disabled');
+												$(
+														'ul.setup-panel li a[href="#step-4"]')
+														.trigger('click');
+												$(this).remove();
+											})
+
+							$('#activate-step-3')
+									.on(
+											'click',
+											function(e) {
+												$('ul.setup-panel li:eq(2)')
+														.removeClass('disabled');
+												$(
+														'ul.setup-panel li a[href="#step-3"]')
+														.trigger('click');
+												$(this).remove();
+											})
+						});
+	</script>
+
+	<br>
+	<br>
 	<%@include file="shared/Footer.jsp"%>
 </body>
 </html>

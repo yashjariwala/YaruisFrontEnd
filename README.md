@@ -80,7 +80,9 @@ And Update both maven projects.
 
 - Fixed glitches.
 
-- On the Sign up page added a checkbox which lets you have the same Billing address as Shipping address 
+- On the Sign up page added a checkbox which lets you have the same Billing address as Shipping address.
+
+- Sign up page edited and made as multi Step form page for a cleaner look.
 
 
 ## Project made by Yash Jariwala 
