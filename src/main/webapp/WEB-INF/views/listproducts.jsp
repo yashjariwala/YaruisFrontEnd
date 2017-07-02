@@ -252,7 +252,7 @@ function scrollFunction() {
 			<h4>
 				<input type="radio" id="pn" name="productname"
 					ng-model="orderbycatg" value="productname"> <label
-					for="pn">Name</label>
+					for="pn">Alphabetically</label>
 			</h4>
 
 			<br>
