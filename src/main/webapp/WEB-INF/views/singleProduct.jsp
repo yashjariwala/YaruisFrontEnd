@@ -13,6 +13,9 @@
 <title>Yaruis Product</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 <style>
+
+
+
 .tg {
 	border-collapse: collapse;
 	border-spacing: 0;

@@ -38,7 +38,7 @@ body {
 
 <script>
 	function FillBilling(f) {
-		confirm("All The values of the shipping address will be copied to the billing address!");
+		confirm("Are you sure you want the same billing and shipping address!");
 		var n1 = document.getElementById('n1');
 		var n2 = document.getElementById('n2');
 		var n3 = document.getElementById('n3');

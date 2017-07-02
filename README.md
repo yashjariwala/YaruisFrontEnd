@@ -75,7 +75,7 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog
+## Changelog as of 02-07-2017
 - Added Title bar icons. 
 
 - Fixed glitches.

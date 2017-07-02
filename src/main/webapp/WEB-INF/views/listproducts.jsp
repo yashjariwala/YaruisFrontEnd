@@ -203,8 +203,6 @@ function scrollFunction() {
 }
 </script>
 
-
-
 <%@include file="shared/Header.jsp"%>
 <body ng-app="prodapp" ng-controller="myprodController"
 	ng-init="listProduct()">
@@ -265,21 +263,6 @@ function scrollFunction() {
 
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<div>
 		<br>
 		<div align="center">
@@ -292,16 +275,7 @@ function scrollFunction() {
 			<input type="text" ng-model="orderbycatg" placeholder="Sorting">
 
 		</div>
-
-
-
-
-
-
-
 		<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Sort Products</span> -->
-
-
 		<div class="content">
 			<div class="login">
 				<div class="main-agi">
@@ -332,10 +306,6 @@ function scrollFunction() {
 								<%-- 						<c:forEach items="${productList}" var="p"> --%>
 								<tr
 									ng-repeat="p in products | filter:searchConditionprod | orderBy:orderbycatg">
-
-
-
-
 									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<td>{{p.productid}}</td>
 									</security:authorize>
@@ -351,12 +321,8 @@ function scrollFunction() {
 
 									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><img
 											src="${imgg}" alt="prodimage" height="80" width="80" /></td>
-
 									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><span
 											class="glyphicon glyphicon-info-sign"></span></a></td>
-
-
-
 									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<td><a href="<c:url value='/editprod/{{p.productid}}' />">Edit</a></td>
 										<td><a

@@ -46,7 +46,7 @@ public class ProductaddController {
 		MultipartFile image = reg.getImage();
 		if (image != null && !image.isEmpty()) {
 			Path path = Paths
-					.get("C:\\Users\\yashj\\workspace\\EcommerceFrontEnd\\src\\main\\webapp\\resources\\images\\"
+					.get("C:\\Users\\yashj\\workspace\\YaruisFrontEnd\\src\\main\\webapp\\resources\\images\\"
 							+ reg.getProductname() + ".jpg");
 			try {
 				image.transferTo(new File(path.toString()));
