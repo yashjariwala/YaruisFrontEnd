@@ -84,16 +84,16 @@ body {
 			<div class="col-xs-12">
 				<ul class="nav nav-pills nav-justified thumbnail setup-panel">
 					<li class="active"><a href="#step-1">
-							<h4 class="list-group-item-heading">Step 1</h4>
-							<p class="list-group-item-text">Basic Details</p>
+							<h4 class="list-group-item-heading">Basic Details</h4>
+							<p class="list-group-item-text">Step 1</p>
 					</a></li>
 					<li class="disabled"><a href="#step-2">
-							<h4 class="list-group-item-heading">Step 2</h4>
-							<p class="list-group-item-text">Shipping Address</p>
+							<h4 class="list-group-item-heading">Shipping Address</h4>
+							<p class="list-group-item-text">Step 2</p>
 					</a></li>
 					<li class="disabled"><a href="#step-3">
-							<h4 class="list-group-item-heading">Step 3</h4>
-							<p class="list-group-item-text">Billing Address</p>
+							<h4 class="list-group-item-heading">Billing Address</h4>
+							<p class="list-group-item-text">Step 3</p>
 					</a></li>
 
 				</ul>

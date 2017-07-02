@@ -94,7 +94,7 @@ input[type=text] {
 
 <style>
 .sidenav {
-	height: 55%;
+	height: 78%;
 	width: 0;
 	position: fixed;
 	z-index: 1;
@@ -191,7 +191,17 @@ input[type=radio]:checked+label {
 	background-color: #e0e0e0;
 }
 </style>
+<script>
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    	document.getElementById("mySidenav").style.width = "250px";
+    } else {
+    	document.getElementById("mySidenav").style.width = "0";
+    }
+}
+</script>
 
 
 
@@ -235,15 +245,59 @@ input[type=radio]:checked+label {
 					ng-model="searchConditionprod" value="Screen Guards"> <label
 					for="Sg">Screen Guards</label>
 			</h4>
+<br>
+			<h1>Sort By</h1>
+
+			<br>
+			<h4>
+				<input type="radio" id="pn" name="productname"
+					ng-model="orderbycatg" value="productname"> <label
+					for="pn">Name</label>
+			</h4>
+
+			<br>
+			<h4>
+				<input type="radio" id="pp" name="productprice"
+					ng-model="orderbycatg" value="productprice"> <label
+					for="pp">Price</label>
+			</h4>
+			<br>
+
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<div>
 		<br>
 		<div align="center">
 			<input type="text" ng-model="searchConditionprod"
 				placeholder="Search Products....">
+
 		</div>
+
+		<div align="center" hidden>
+			<input type="text" ng-model="orderbycatg" placeholder="Sorting">
+
+		</div>
+
+
+
+
+
+
 
 		<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Sort Products</span> -->
 
@@ -276,7 +330,12 @@ input[type=radio]:checked+label {
 									</security:authorize>
 								</tr>
 								<%-- 						<c:forEach items="${productList}" var="p"> --%>
-								<tr ng-repeat="p in products | filter:searchConditionprod">
+								<tr
+									ng-repeat="p in products | filter:searchConditionprod | orderBy:orderbycatg">
+
+
+
+
 									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<td>{{p.productid}}</td>
 									</security:authorize>

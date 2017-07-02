@@ -84,6 +84,9 @@ And Update both maven projects.
 
 - Sign up page edited and made as multi Step form page for a cleaner look.
 
+- The recommended products on the single product page displays automatically without pressing a button.
+
+- In the list of products page it is possible to sort by name or price.
 
 ## Project made by Yash Jariwala 
 
