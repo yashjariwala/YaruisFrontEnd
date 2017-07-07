@@ -84,9 +84,9 @@
 	display: inline;
 }
 
-input[type=radio] {
-	display: none;
-}
+ input[type=radio] { 
+	display: none; 
+ } 
 
 
 </style>
@@ -161,9 +161,9 @@ input[type=radio] {
 
 
 										<h2>
-											<input type="radio" id="recprodrad" ng-model="prodfilter" value="${productObject.categoryname}" />
+											<input type="radio" id="recprodrad" ng-model="prodfilter.categoryname" value="${productObject.categoryname}" />
 
-
+                                            <input type="radio" id="sameprod" ng-model="prodfilter.productid" value="!${productObject.productid}" />
 										</h2>
 
 									</div>
@@ -197,7 +197,7 @@ input[type=radio] {
 											<th width="120">Product Image</th>
 											<th width="40">Info</th>
 										</tr>
-										<tr ng-repeat="p in products | filter: prodfilter ">
+										<tr ng-repeat="p in products |filter:prodfilter">
 											<td><a href="<c:url value='/infoprod/{{p.productid}}'/>">{{p.productname}}</td>
 											<td>{{p.productprice}}</td>
 											<c:url value="/resources/images/{{p.productname}}.jpg"
@@ -240,6 +240,7 @@ input[type=radio] {
 			if (document.body.scrollTop > 10
 					|| document.documentElement.scrollTop > 10) {
 				document.getElementById("recprodrad").click();
+				document.getElementById("sameprod").click();
 			} 
 		}
 	</script>

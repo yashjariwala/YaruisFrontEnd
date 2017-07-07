@@ -75,7 +75,8 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 02-07-2017
+## Changelog as of 07-07-2017
+
 - Added Title bar icons. 
 
 - Fixed glitches.
@@ -87,6 +88,8 @@ And Update both maven projects.
 - The recommended products on the single product page displays automatically without pressing a button.
 
 - In the list of products page it is possible to sort by name or price.
+
+- The recommended products does not show the same product in the list as to the product on the single product page.
 
 ## Project made by Yash Jariwala 
 
