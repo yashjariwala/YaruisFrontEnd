@@ -75,11 +75,11 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 07-07-2017
+## Changelog as of 21-07-2017
+
+- Added 404 page
 
 - Added Title bar icons. 
-
-- Fixed glitches.
 
 - On the Sign up page added a checkbox which lets you have the same Billing address as Shipping address.
 
@@ -90,6 +90,10 @@ And Update both maven projects.
 - In the list of products page it is possible to sort by name or price.
 
 - The recommended products does not show the same product in the list as to the product on the single product page.
+
+## Known Problems 
+
+- Bootstrap related design problems in header and some pages.(will be solved soon) 
 
 ## Project made by Yash Jariwala 
 

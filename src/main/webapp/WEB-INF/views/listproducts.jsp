@@ -28,7 +28,7 @@ body {
 
 .main-agi {
 	background: #fff;
-	width: 50%;
+	width: 45%;
 	margin: 0em auto;
 	box-shadow: 0px 0px 15px 0px #D6D6D6;
 	-o-box-shadow: 0px 0px 15px 0px #D6D6D6;
@@ -88,11 +88,7 @@ input[type=text] {
 .tg .tg-4eph {
 	background-color: #f9f9f9
 }
-</style>
 
-
-
-<style>
 .sidenav {
 	height: 78%;
 	width: 0;
@@ -195,7 +191,7 @@ input[type=radio]:checked+label {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
     	document.getElementById("mySidenav").style.width = "250px";
     } else {
     	document.getElementById("mySidenav").style.width = "0";

@@ -13,9 +13,6 @@
 <title>Yaruis Product</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 <style>
-
-
-
 .tg {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -66,7 +63,6 @@
 	padding-top: 60px;
 }
 
-
 @media screen and (max-height: 450px) {
 	.sidenav {
 		padding-top: 15px;
@@ -84,11 +80,9 @@
 	display: inline;
 }
 
- input[type=radio] { 
-	display: none; 
- } 
-
-
+input[type=radio] {
+	display: none;
+}
 </style>
 
 <body ng-app="myapp" ng-controller="productsController">
@@ -146,30 +140,51 @@
 										<!-- 										<p>SALE</p> -->
 										<!-- 									</div> -->
 
-										<security:authorize access="hasRole('ROLE_USER')">
 
-											<a ng-click="addToCart(${productObject.productid})"
+
+										<!-- when user logged in -->
+										<c:if
+											test="${pageContext.request.userPrincipal.name != null }">
+
+										<a ng-click="addToCart(${productObject.productid})"
 												data-text="Add To Cart" class="my-cart-yash item_add">Add
 												To Cart</a>
-										</security:authorize>
 
+										</c:if>
+
+
+
+
+										<!-- when user not logged in -->
+										<c:if
+											test="${pageContext.request.userPrincipal.name == null }">
+											<a href="<c:url value='/Login' />" class="my-cart-yash item_add">Login</a>
+											<a href="<c:url value='/Register'/>" class="my-cart-yash item_add"> Create
+													Account </a>
+										</c:if>
+
+
+
+							
 										<c:url value="/listproduct" var="url"></c:url>
 
-
+<br><br>
 										<a href="${url}" class="my-cart-yash item_add"> Continue
 											shopping</a> <br> <br>
 
 
 										<h2>
-											<input type="radio" id="recprodrad" ng-model="prodfilter.categoryname" value="${productObject.categoryname}" />
-
-                                            <input type="radio" id="sameprod" ng-model="prodfilter.productid" value="!${productObject.productid}" />
+											<input type="radio" id="recprodrad"
+												ng-model="prodfilter.categoryname"
+												value="${productObject.categoryname}" /> <input
+												type="radio" id="sameprod" ng-model="prodfilter.productid"
+												value="!${productObject.productid}" />
 										</h2>
 
 									</div>
 								</div>
 							</div>
-<br>
+							<br>
 
 						</div>
 						<div class="clearfix"></div>
@@ -241,7 +256,7 @@
 					|| document.documentElement.scrollTop > 10) {
 				document.getElementById("recprodrad").click();
 				document.getElementById("sameprod").click();
-			} 
+			}
 		}
 	</script>
 
