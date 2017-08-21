@@ -12,7 +12,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<head>
 <title>Forbidden</title>
+<link rel="shortcut icon" href="${img}/no.png" />
+</head>
 <style>
 body {
 	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
@@ -21,9 +24,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
-}
 </style>
 
 <html>

@@ -79,7 +79,9 @@
 
 							<li><a>Welcome:
 									${pageContext.request.userPrincipal.name}</a></li>
+							<li><a href="<c:url value='/MyAccount/getUserDetails'/>">My Account</a>
 							<li><a href="<c:url value='/Logout'/>">Logout</a></li>
+							
 
 						</c:if>
 

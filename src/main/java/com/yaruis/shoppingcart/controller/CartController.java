@@ -23,8 +23,6 @@ public class CartController {
 	@Autowired
 	CartDAO cartdao;
 
-
-
 	@RequestMapping("/**/cart/**/getCartId")
 	public String getCartId(Model model) {
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();

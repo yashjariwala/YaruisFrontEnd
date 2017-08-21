@@ -22,9 +22,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
-}
 
 .tg {
 	border-collapse: collapse;

@@ -14,6 +14,7 @@
 <html>
 <head>
 <title>Yaruis Home</title>
+<link rel="shortcut icon" href="${img}/y.png" />
 <style>
 .yaruish1 {
 	color: #1565C0;

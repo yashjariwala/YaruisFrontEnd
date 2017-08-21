@@ -26,16 +26,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agi {
-	background: #fff;
-	width: 45%;
-	margin: 0em auto;
-	box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-o-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-moz-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-webkit-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	padding: 3em;
-}
 
 input[type=text]:focus {
 	width: 80%;
@@ -141,6 +131,7 @@ input[type=radio] {
 }
 
 input[type=radio]+label {
+	width: 170px;
 	display: inline-block;
 	margin: -2px;
 	padding: 4px 12px;
@@ -188,15 +179,20 @@ input[type=radio]:checked+label {
 }
 </style>
 <script>
-window.onscroll = function() {scrollFunction()};
+	window.onscroll = function() {
+		if ($(this).width() > 960) {
+			scrollFunction()
+		}
+	};
 
-function scrollFunction() {
-    if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 2) {
-    	document.getElementById("mySidenav").style.width = "250px";
-    } else {
-    	document.getElementById("mySidenav").style.width = "0";
-    }
-}
+	function scrollFunction() {
+		if (document.body.scrollTop > 2
+				|| document.documentElement.scrollTop > 2) {
+			document.getElementById("mySidenav").style.width = "250px";
+		} else {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+	}
 </script>
 
 <%@include file="shared/Header.jsp"%>
@@ -239,14 +235,13 @@ function scrollFunction() {
 					ng-model="searchConditionprod" value="Screen Guards"> <label
 					for="Sg">Screen Guards</label>
 			</h4>
-<br>
+			<br>
 			<h1>Sort By</h1>
 
 			<br>
 			<h4>
 				<input type="radio" id="pn" name="productname"
-					ng-model="orderbycatg" value="productname"> <label
-					for="pn">Alphabetically</label>
+					ng-model="orderbycatg" value="productname"> <label for="pn">Alphabetically</label>
 			</h4>
 
 			<br>
@@ -274,7 +269,7 @@ function scrollFunction() {
 		<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Sort Products</span> -->
 		<div class="content">
 			<div class="login">
-				<div class="main-agi">
+				<div class="main-wide-agileits">
 					<div class="form-w3agile">
 						<h3>Product List</h3>
 						<div class="table-responsive">
@@ -344,6 +339,6 @@ function scrollFunction() {
 		}
 	</script>
 	<%@include file="shared/Footer.jsp"%>
-	<script src="${js}/app.js"></script>
+<script src="${js}/app.js"></script>
 </body>
 </html>

@@ -63,16 +63,7 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agi {
-	background: #fff;
-	width: 35%;
-	margin: 0em auto;
-	box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-o-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-moz-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-webkit-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	padding: 3em;
-}
+
 input[type=text]:focus {
 	width: 80%;
 }
@@ -101,7 +92,7 @@ input[type=text] {
 
 		<div class="content">
 			<div class="login">
-				<div class="main-agi">
+				<div class="main-wide-agileits">
 					<div class="form-w3agile">
 						<h3>Category List</h3>
 
@@ -109,7 +100,7 @@ input[type=text] {
 							<tr>
 								<th width="80">Category ID</th>
 								<th width="120">Category Name</th>
-								<th width="120">Category Description</th>
+								<th width="300">Category Description</th>
 								<th width="60">Edit</th>
 								<th width="60">Delete</th>
 							</tr>

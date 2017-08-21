@@ -24,16 +24,7 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agi {
-	background: #fff;
-	width: 50%;
-	margin: 0em auto;
-	box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-o-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-moz-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-webkit-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	padding: 3em;
-}
+
 
 input[type=text]:focus {
 	width: 80%;
@@ -95,7 +86,7 @@ input[type=text] {
 
 		<div class="content">
 			<div class="login">
-				<div class="main-agi">
+				<div class="main-wide-agileits">
 					<div class="form-w3agile">
 						<h3>Items in your Cart</h3>
 						<div class="table-responsive">

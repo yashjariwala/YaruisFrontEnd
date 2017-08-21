@@ -31,10 +31,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
-}
-
 .form-w3agileabc h1 {
 	color: #FF0000;
 	font-size: 2.5em;

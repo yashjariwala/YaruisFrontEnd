@@ -13,6 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>Yaruis Add Supplier</title>
+<link rel="shortcut icon" href="${img}/y.png" />
 <style>
 body {
 	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
@@ -21,9 +22,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
-}
 
 .tg {
 	border-collapse: collapse;

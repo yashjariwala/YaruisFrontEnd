@@ -29,10 +29,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
-}
-
 .banner2 {
 	background: url("${img}/ab1t.jpg");
 	background-size: cover;
@@ -45,9 +41,6 @@ body {
 	<!--banner-->
 	<div class="banner2"></div>
 	<!--banner-->
-
-
-
 
 
 	<!--content-->
@@ -75,11 +68,6 @@ body {
 		<!--login-->
 	</div>
 	<!--content-->
-
-
-
-
-
 
 	<%@include file="shared/Footer.jsp"%>
 </body>

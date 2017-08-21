@@ -20,9 +20,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
-}
 </style>
 <head>
 <title>Yaruis Add Category</title>

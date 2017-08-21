@@ -16,6 +16,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Yaruis Products list</title>
+<link rel="shortcut icon" href="${img}/y.png" />
 </head>
 <style type="text/css">
 body {
@@ -25,16 +26,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agi {
-	background: #fff;
-	width: 50%;
-	margin: 0em auto;
-	box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-o-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-moz-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	-webkit-box-shadow: 0px 0px 15px 0px #D6D6D6;
-	padding: 3em;
-}
 
 input[type=text]:focus {
 	width: 80%;
@@ -87,13 +78,9 @@ input[type=text] {
 .tg .tg-4eph {
 	background-color: #f9f9f9
 }
-</style>
 
-
-
-<style>
 .sidenav {
-	height: 55%;
+	height: 78%;
 	width: 0;
 	position: fixed;
 	z-index: 1;
@@ -144,6 +131,7 @@ input[type=radio] {
 }
 
 input[type=radio]+label {
+	width: 170px;
 	display: inline-block;
 	margin: -2px;
 	padding: 4px 12px;
@@ -190,9 +178,22 @@ input[type=radio]:checked+label {
 	background-color: #e0e0e0;
 }
 </style>
+<script>
+	window.onscroll = function() {
+		if ($(this).width() > 960) {
+			scrollFunction()
+		}
+	};
 
-
-
+	function scrollFunction() {
+		if (document.body.scrollTop > 2
+				|| document.documentElement.scrollTop > 2) {
+			document.getElementById("mySidenav").style.width = "250px";
+		} else {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+	}
+</script>
 
 <%@include file="shared/Header.jsp"%>
 <body ng-app="prodapp" ng-controller="myprodController"
@@ -234,22 +235,41 @@ input[type=radio]:checked+label {
 					ng-model="searchConditionprod" value="Screen Guards"> <label
 					for="Sg">Screen Guards</label>
 			</h4>
+			<br>
+			<h1>Sort By</h1>
+
+			<br>
+			<h4>
+				<input type="radio" id="pn" name="productname"
+					ng-model="orderbycatg" value="productname"> <label for="pn">Alphabetically</label>
+			</h4>
+
+			<br>
+			<h4>
+				<input type="radio" id="pp" name="productprice"
+					ng-model="orderbycatg" value="productprice"> <label
+					for="pp">Price</label>
+			</h4>
+			<br>
+
 		</div>
 	</div>
-
 	<div>
 		<br>
 		<div align="center">
 			<input type="text" ng-model="searchConditionprod"
 				placeholder="Search Products....">
+
 		</div>
 
+		<div align="center" hidden>
+			<input type="text" ng-model="orderbycatg" placeholder="Sorting">
+
+		</div>
 		<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Sort Products</span> -->
-
-
 		<div class="content">
 			<div class="login">
-				<div class="main-agi">
+				<div class="main-agileits">
 					<div class="form-w3agile">
 						<h3>Product List</h3>
 						<div class="table-responsive">
@@ -275,7 +295,8 @@ input[type=radio]:checked+label {
 									</security:authorize>
 								</tr>
 								<%-- 						<c:forEach items="${productList}" var="p"> --%>
-								<tr ng-repeat="p in products | filter:searchConditionprod">
+								<tr
+									ng-repeat="p in products | filter:searchConditionprod | orderBy:orderbycatg">
 									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<td>{{p.productid}}</td>
 									</security:authorize>
@@ -291,12 +312,8 @@ input[type=radio]:checked+label {
 
 									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><img
 											src="${imgg}" alt="prodimage" height="80" width="80" /></td>
-
 									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><span
 											class="glyphicon glyphicon-info-sign"></span></a></td>
-
-
-
 									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<td><a href="<c:url value='/editprod/{{p.productid}}' />">Edit</a></td>
 										<td><a

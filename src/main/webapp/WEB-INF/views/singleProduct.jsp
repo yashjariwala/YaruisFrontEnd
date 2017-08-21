@@ -12,6 +12,7 @@
 <html>
 <title>Yaruis Product</title>
 <link rel="shortcut icon" href="${img}/y.png" />
+
 <style>
 .tg {
 	border-collapse: collapse;
@@ -116,6 +117,7 @@ input[type=radio] {
 
 									</div>
 								</div>
+								<br><br>
 								<div class="single-right simpleCart_shelfItem">
 									<h4>${productObject.productname}</h4>
 									<h5>${productObject.categoryname}</h5>

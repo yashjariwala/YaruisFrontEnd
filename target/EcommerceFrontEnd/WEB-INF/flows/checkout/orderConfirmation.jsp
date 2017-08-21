@@ -18,6 +18,7 @@
 <html lang="en">
 <head>
 <title>Order Recipt</title>
+<link rel="shortcut icon" href="${img}/y.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="${css}/bootstrap.min.css">
@@ -32,10 +33,6 @@ body {
 	background-size: cover;
 	font-family: 'Open Sans', sans-serif;
 	background-attachment: fixed;
-}
-
-.main-agileits {
-	background: #fff;
 }
 
 .form-w3agileabc h3 {

@@ -31,9 +31,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
-}
 </style>
 
 <script>

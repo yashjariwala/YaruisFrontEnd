@@ -14,6 +14,7 @@
 <html lang="en">
 <head>
 <title>Yaruis About Us</title>
+<link rel="shortcut icon" href="${img}/about.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="${css}/bootstrap.min.css">
@@ -28,10 +29,6 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
-}
-
 .banner2 {
 	background: url("${img}/ab1t.jpg");
 	background-size: cover;
@@ -44,9 +41,6 @@ body {
 	<!--banner-->
 	<div class="banner2"></div>
 	<!--banner-->
-
-
-
 
 
 	<!--content-->
@@ -74,11 +68,6 @@ body {
 		<!--login-->
 	</div>
 	<!--content-->
-
-
-
-
-
 
 	<%@include file="shared/Footer.jsp"%>
 </body>

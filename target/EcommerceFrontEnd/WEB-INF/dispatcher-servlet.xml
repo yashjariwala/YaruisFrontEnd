@@ -16,6 +16,8 @@
 	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
 	<!-- <mvc:default-servelet-handler /> -->
 	<mvc:annotation-driven />
+	
+	
 
 
 	<!-- WebFlow Configuration -->

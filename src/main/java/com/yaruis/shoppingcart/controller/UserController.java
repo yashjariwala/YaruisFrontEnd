@@ -10,6 +10,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,11 +20,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.yaruis.ecommercebackend.dao.UserDAO;
 import com.yaruis.ecommercebackend.model.BillingAddress;
+import com.yaruis.ecommercebackend.model.Cart;
 import com.yaruis.ecommercebackend.model.Email;
+import com.yaruis.ecommercebackend.model.Product;
 import com.yaruis.ecommercebackend.model.ShippingAddress;
 import com.yaruis.ecommercebackend.model.UserCustomer;
 
@@ -127,6 +131,12 @@ public class UserController {
 		return model;
 	}
 
+//	@RequestMapping("/**/MyAccount/**/{userid}")
+//	public ModelAndView getRecord(@PathVariable("userid") int id, Model model) {
+//		UserCustomer usercustomerobj = udao.get(id);
+//		return new ModelAndView("Myaccount", "usercustomerobj", usercustomerobj);
+//	}
+	
 	@RequestMapping("/loginerror")
 	public String LoginError(@RequestParam(value = "error", required = false) String error, Model model) {
 		model.addAttribute("error", "Incorrect Username or Password.");

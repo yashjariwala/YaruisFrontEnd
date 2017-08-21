@@ -29,10 +29,33 @@ body {
 	background-attachment: fixed;
 }
 
-.main-agileits {
-	background: #fff;
+.login-footer {
+  padding: 0.25em 0.5em 0.5em;
+  
 }
+
 </style>
+<script type="text/javascript">
+	function togglePassword(el) {
+
+		// Checked State
+		var checked = el.checked;
+
+		if (checked) {
+			// Changing type attribute
+			document.getElementById("password").type = 'text';
+
+			// Change the Text
+			document.getElementById("toggleText").textContent = "Hide Password";
+		} else {
+			// Changing type attribute
+			document.getElementById("password").type = 'password';
+
+			// Change the Text
+			document.getElementById("toggleText").textContent = "Show Password";
+		}
+	}
+</script>
 <body>
 	<%@include file="shared/Header.jsp"%>
 
@@ -49,26 +72,36 @@ body {
 						<div class=error style="color: #ff0000">${error}</div>
 					</c:if>
 					<c:if test="${not empty logout}">
-					<div class=logout style="color:#ff0000"> ${logout} </div>
+						<div class=logout style="color: #ff0000">${logout}</div>
 					</c:if>
 					<br>
-					<form action="<c:url value="j_spring_security-check"/> "method="post">
+					<form action="<c:url value="j_spring_security-check"/> "
+						method="post">
 						<div class="key">
-							<i class="fa fa-user" aria-hidden="true"></i> <input
-								type="text" value="User Name" name="j_User_id"
-								onfocus="this.value = '';"
+							<i class="fa fa-user" aria-hidden="true"></i> <input type="text"
+								value="User Name" name="j_User_id" onfocus="this.value = '';"
 								onblur="if (this.value == '') {this.value = 'User name';}"
 								required="">
 							<div class="clearfix"></div>
 						</div>
+
 						<div class="key">
 							<i class="fa fa-lock" aria-hidden="true"></i> <input
-								type="password" value="Password" name="j_User_password"
-								onfocus="this.value = '';"
+								id="password" type="password" value="Password"
+								name="j_User_password" onfocus="this.value = '';"
 								onblur="if (this.value == '') {this.value = 'Password';}"
 								required="">
 							<div class="clearfix"></div>
+											<div class="login-footer">
+							<input type='checkbox' id='toggle' value='0'
+								onchange='togglePassword(this);'>&nbsp;<span
+								id='toggleText'>Show Password</span>
 						</div>
+						</div>
+
+		
+
+
 						<input type="submit" value="Login"> <input type="hidden"
 							name="${csrf.parametername}" value="${_csrf.token}" />
 					</form>
@@ -83,7 +116,6 @@ body {
 		<!--login-->
 	</div>
 	<!--content-->
-
 
 	<%@include file="shared/Footer.jsp"%>
 </body>
