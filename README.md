@@ -79,9 +79,9 @@ And Update both maven projects.
 
 - Added My account Page to view account details! (Beta: CSS is not applied and sometimes doesnt work!)
 
--Updated dependencies 
+- Updated dependencies 
 
--Made CSS changes making some visual refinements.  
+- Made CSS changes making some visual refinements.  
 
 - Added 404 page
 
