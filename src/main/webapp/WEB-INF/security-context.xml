@@ -82,7 +82,7 @@
 			access="hasAnyRole('ROLE_USER')" />
 
 	<!-- My Account -->
-		<security:intercept-url pattern="/MyAccount**"
+		<security:intercept-url pattern="/MyAccount/**"
 			access="hasAnyRole('ROLE_USER','ROLE_ADMIN')" />
 
 

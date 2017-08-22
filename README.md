@@ -75,9 +75,9 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 21-08-2017
+## Changelog as of 22-08-2017
 
-- Added My account Page to view account details! (Beta: CSS is not applied and sometimes doesnt work!)
+- Added My account Page to view account details!
 
 - Updated dependencies 
 
@@ -99,9 +99,9 @@ And Update both maven projects.
 
 ## Known Problems 
 
-- Bootstrap related design problems in header and some pages.(will be solved soon) 
+- Trying to add edit options to the My Account page so details can be changed or removed..(Working on it and will be added to next commit)
 
-- CSS is not applied and sometimes doesn't work on the new My Account page working on it and will be resolved by next commit.
+- Bootstrap related design problems in header and some pages.(will be solved soon) 
 
 ## Project made by Yash Jariwala 
 

@@ -17,39 +17,56 @@
 <title>My Account</title>
 </head>
 <%@include file="shared/Header.jsp"%>
+<style>
+body {
+	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif;
+	background-attachment: fixed;
+}
+
+.login-footer {
+	padding: 0.25em 0.5em 0.5em;
+}
+</style>
+
 <body>
 
-
-
- ${usercustomerobj.useremail}
-	${usercustomerobj.userphoneno} ${usercustomerobj.userpassword}
-	${usercustomerobj.userrole}
-
-
-	<br>
-	<br>
-	<strong>Shipping Address</strong>
-	<br /> ${usercustomerobj.shippingAddress.flatno},
-	${usercustomerobj.shippingAddress.buildingname}
-	<br /> ${usercustomerobj.shippingAddress.localityname}
-	<br /> Landmark: ${usercustomerobj.shippingAddress.landmark}
-	<br /> ${usercustomerobj.shippingAddress.cityname},
-	${usercustomerobj.shippingAddress.statename}
-	<br /> ${usercustomerobj.shippingAddress.countryname},
-	${usercustomerobj.shippingAddress.zipcode}
-
-<br><br>
-	<strong>Billing Address</strong>
-	<br /> ${usercustomerobj.billingAddress.flatno},
-	${usercustomerobj.billingAddress.buildingname}
-	<br /> ${usercustomerobj.billingAddress.localityname}
-	<br /> Landmark: ${usercustomerobj.billingAddress.landmark}
-	<br /> ${usercustomerobj.billingAddress.cityname},
-	${usercustomerobj.billingAddress.statename}
-	<br /> ${usercustomerobj.billingAddress.countryname},
-	${usercustomerobj.billingAddress.zipcode}
-
-
-
+	<!--content-->
+	<div class="content">
+		<!--login-->
+		<div class="login">
+			<div class="main-agileits">
+				<div class="form-w3agile">
+				<h3>Account Details</h3>
+				    <strong>User Name : </strong>${usercustomerobj.username}<br><br>
+					<strong>Email ID : </strong>${usercustomerobj.useremail}<br><br>
+					 <strong>Prone Number : </strong> ${usercustomerobj.userphoneno}<br><br>
+					 <strong>Password : </strong>${usercustomerobj.userpassword} <br>
+					 <br> <strong>Shipping
+						Address  : </strong> 
+<%-- 					<a href="<c:url value='/MyAccount/editshipadd'/>">edit</a> --%>
+						<br /> ${usercustomerobj.shippingAddress.flatno},
+					${usercustomerobj.shippingAddress.buildingname} <br />
+					${usercustomerobj.shippingAddress.localityname} <br /> Landmark:
+					${usercustomerobj.shippingAddress.landmark} <br />
+					${usercustomerobj.shippingAddress.cityname},
+					${usercustomerobj.shippingAddress.statename} <br />
+					${usercustomerobj.shippingAddress.countryname},
+					${usercustomerobj.shippingAddress.zipcode} <br> <br> 
+					<strong>Billing
+						Address : </strong> <br /> ${usercustomerobj.billingAddress.flatno},
+					${usercustomerobj.billingAddress.buildingname} <br />
+					${usercustomerobj.billingAddress.localityname} <br /> Landmark:
+					${usercustomerobj.billingAddress.landmark} <br />
+					${usercustomerobj.billingAddress.cityname},
+					${usercustomerobj.billingAddress.statename} <br />
+					${usercustomerobj.billingAddress.countryname},
+					${usercustomerobj.billingAddress.zipcode}
+				</div>
+			</div>
+		</div>
+	</div>
+	<%@include file="shared/Footer.jsp"%>
 </body>
 </html>
