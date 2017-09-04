@@ -75,7 +75,9 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 22-08-2017
+## Changelog as of 04-09-2017
+
+-  Show or hide password on login and sign up page.
 
 - Added My account Page to view account details!
 

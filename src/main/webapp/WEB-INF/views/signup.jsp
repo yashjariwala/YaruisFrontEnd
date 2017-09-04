@@ -31,6 +31,42 @@ body {
 	background-attachment: fixed;
 }
 
+/*hide checkbox and radio buttons*/
+input[type=checkbox], input[type=radio] {
+	width: 2em;
+	margin: 0;
+	padding-top : 20px;
+	
+	font-size: 1em;
+	opacity: 0; /*This is the part tht actually hides it*/
+}
+
+/*normalize the spacing*/
+input[type=checkbox]+label, input[type=radio]+label {
+	display: inline-block;
+	margin-left: -2em;
+	line-height: 1.5em;
+	padding-top : 12px;
+}
+
+/*unchecked css*/
+input[type=checkbox]+label>span, input[type=radio]+label>span {
+	display: inline-block;
+	background-image:
+		url('${img}/view.png');
+	width: 25px;
+	height: 25px;
+	
+}
+
+/*selected checkbox css*/
+input[type=checkbox]:checked+label>span>span {
+	width: 25px;
+	height: 25px;
+	display: block;
+	background-image: url('${img}/hide.png');
+	
+}
 </style>
 
 <script>
@@ -67,15 +103,26 @@ body {
 		}
 	}
 </script>
+<script type="text/javascript">
+	function togglePassword(el) {
 
+		// Checked State
+		var checked = el.checked;
 
+		if (checked) {
+			// Changing type attribute
+			document.getElementById("password").type = 'text';
+
+		} else {
+			// Changing type attribute
+			document.getElementById("password").type = 'password';
+		}
+	}
+</script>
 <body>
 	<%@include file="shared/Header.jsp"%>
-
-
 	<br>
 	<br>
-
 	<div class="container">
 		<div class="row form-group">
 			<div class="col-xs-12">
@@ -143,7 +190,9 @@ body {
 								path="userpassword" cssClass="error"></form:errors></span>
 						<div class="key">
 							<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
-							<form:input type="password" path="userpassword" />
+							<form:input type="password" path="userpassword" id="password" /><input id="check1" type="checkbox"
+								name="check1" value="0" onchange='togglePassword(this);' /><label
+								for="check1"><span><span></span></span></label>
 							<div class="clearfix"></div>
 						</div>
 

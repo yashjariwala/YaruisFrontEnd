@@ -26,7 +26,7 @@ body {
 
 <html>
 <body>
-	<%@include file="shared/Header.jsp"%>
+
 	<!--content-->
 	<div class="content">
 		<!--login-->
@@ -45,6 +45,6 @@ body {
 		</div>
 	</div>
 
-	<%@include file="shared/Footer.jsp"%>
+
 </body>
 </html>

@@ -29,10 +29,43 @@ body {
 	background-attachment: fixed;
 }
 
-.login-footer {
-  padding: 0.25em 0.5em 0.5em;
-  
+/*hide checkbox and radio buttons*/
+input[type=checkbox], input[type=radio] {
+	width: 2em;
+	margin: 0;
+	padding-top : 20px;
+	
+	font-size: 1em;
+	opacity: 0; /*This is the part tht actually hides it*/
 }
+
+/*normalize the spacing*/
+input[type=checkbox]+label, input[type=radio]+label {
+	display: inline-block;
+	margin-left: -2em;
+	line-height: 1.5em;
+	padding-top : 12px;
+}
+
+/*unchecked css*/
+input[type=checkbox]+label>span, input[type=radio]+label>span {
+	display: inline-block;
+	background-image:
+		url('${img}/view.png');
+	width: 25px;
+	height: 25px;
+	
+}
+
+/*selected checkbox css*/
+input[type=checkbox]:checked+label>span>span {
+	width: 25px;
+	height: 25px;
+	display: block;
+	background-image: url('${img}/hide.png');
+	
+}
+
 
 </style>
 <script type="text/javascript">
@@ -45,14 +78,9 @@ body {
 			// Changing type attribute
 			document.getElementById("password").type = 'text';
 
-			// Change the Text
-			document.getElementById("toggleText").textContent = "Hide Password";
 		} else {
 			// Changing type attribute
 			document.getElementById("password").type = 'password';
-
-			// Change the Text
-			document.getElementById("toggleText").textContent = "Show Password";
 		}
 	}
 </script>
@@ -90,17 +118,11 @@ body {
 								id="password" type="password" value="Password"
 								name="j_User_password" onfocus="this.value = '';"
 								onblur="if (this.value == '') {this.value = 'Password';}"
-								required="">
+								required=""> <input id="check1" type="checkbox"
+								name="check1" value="0" onchange='togglePassword(this);' /><label
+								for="check1"><span><span></span></span></label>
 							<div class="clearfix"></div>
-											<div class="login-footer">
-							<input type='checkbox' id='toggle' value='0'
-								onchange='togglePassword(this);'>&nbsp;<span
-								id='toggleText'>Show Password</span>
 						</div>
-						</div>
-
-		
-
 
 						<input type="submit" value="Login"> <input type="hidden"
 							name="${csrf.parametername}" value="${_csrf.token}" />
