@@ -27,11 +27,11 @@ public class OrderController {
         Cart cart = cartdao.getCartByCartId(cartId);
         //UPDATE CARTID FOR CUSTOMERORDER - SET CARTID
         customerOrder.setCart(cart);
-
-
+        System.out.println(cart);
         UserCustomer customer = cart.getUsercustomer();
         //SET CUSTOMERID
         customerOrder.setUser(customer);
+        System.out.println(customer);
         //SET BILLINGADDRESSID
         customerOrder.setBillingAddress(customer.getBillingAddress());
         //SET SHIPPINGADDRESSID

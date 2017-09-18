@@ -117,7 +117,8 @@ input[type=radio] {
 
 									</div>
 								</div>
-								<br><br>
+								<br>
+								<br>
 								<div class="single-right simpleCart_shelfItem">
 									<h4>${productObject.productname}</h4>
 									<h5>${productObject.categoryname}</h5>
@@ -148,7 +149,7 @@ input[type=radio] {
 										<c:if
 											test="${pageContext.request.userPrincipal.name != null }">
 
-										<a ng-click="addToCart(${productObject.productid})"
+											<a ng-click="addToCart(${productObject.productid})"
 												data-text="Add To Cart" class="my-cart-yash item_add">Add
 												To Cart</a>
 
@@ -160,19 +161,20 @@ input[type=radio] {
 										<!-- when user not logged in -->
 										<c:if
 											test="${pageContext.request.userPrincipal.name == null }">
-											<a href="<c:url value='/Login' />" class="my-cart-yash item_add">Login</a>
-											<a href="<c:url value='/Register'/>" class="my-cart-yash item_add"> Create
-													Account </a>
+											<a href="<c:url value='/Login' />"
+												class="my-cart-yash item_add">Login</a>
+											<a href="<c:url value='/Register'/>"
+												class="my-cart-yash item_add"> Create Account </a>
 										</c:if>
 
 
 
-							
+
 										<c:url value="/listproduct" var="url"></c:url>
 
-<br><br>
-										<a href="${url}" class="my-cart-yash item_add"> Continue
-											shopping</a> <br> <br>
+										<br>
+										<br> <a href="${url}" class="my-cart-yash item_add">
+											Continue shopping</a> <br> <br>
 
 
 										<h2>
@@ -215,13 +217,13 @@ input[type=radio] {
 											<th width="40">Info</th>
 										</tr>
 										<tr ng-repeat="p in products |filter:prodfilter">
-											<td><a href="<c:url value='/infoprod/{{p.productid}}'/>">{{p.productname}}</td>
+											<td><a href="<c:url value='/infoprod/{{p.productid}}'/>">{{p.productname}}</a></td>
 											<td>{{p.productprice}}</td>
 											<c:url value="/resources/images/{{p.productname}}.jpg"
 												var="imgg" />
 
 											<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><img
-													src="${imgg}" alt="prodimage" height="80" width="80" /></td>
+													src="${imgg}" alt="prodimage" height="80" width="80" /></a></td>
 
 											<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><span
 													class="glyphicon glyphicon-info-sign"></span></a></td>
@@ -235,27 +237,17 @@ input[type=radio] {
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
-	</div>
 	<%@include file="shared/Footer.jsp"%>
 	<script src="${js}/imagezoom.js"></script>
 	<script src="${js}/cartcontroller.js"></script>
-
-
 	<script>
 		window.onscroll = function() {
 			scrollFunction()
 		};
 
 		function scrollFunction() {
-			if (document.body.scrollTop > 10
-					|| document.documentElement.scrollTop > 10) {
+			if (document.body.scrollTop > 2
+					|| document.documentElement.scrollTop > 2) {
 				document.getElementById("recprodrad").click();
 				document.getElementById("sameprod").click();
 			}

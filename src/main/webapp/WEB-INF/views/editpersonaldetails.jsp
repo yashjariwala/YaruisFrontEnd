@@ -109,16 +109,17 @@ input[type=checkbox]:checked+label>span>span {
 							<div class="clearfix"></div>
 						</div>
 
-						
-							<form:label path="useremail">User Email</form:label>
-							<br> <span style="color: #ff0000">${emailMsg} <form:errors
-									path="useremail" cssClass="error"></form:errors></span>
-							<div class="key">
-								<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
-								<form:input type="text" path="useremail" readonly="true"/>
-								<div class="clearfix"></div>
-							</div>
-					
+
+						<form:label path="useremail">User Email</form:label>
+						<br>
+						<span style="color: #ff0000">${emailMsg} <form:errors
+								path="useremail" cssClass="error"></form:errors></span>
+						<div class="key">
+							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
+							<form:input type="text" path="useremail" readonly="true" />
+							<div class="clearfix"></div>
+						</div>
+
 						<form:label path="userphoneno">User Phone No</form:label>
 						<div class="key">
 							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
@@ -133,36 +134,34 @@ input[type=checkbox]:checked+label>span>span {
 								onchange='togglePassword(this);' /><label for="check1"><span><span></span></span></label>
 							<div class="clearfix"></div>
 						</div>
-						
+
 						<div id="hidden" hidden="true">
-							<form:label path="userrole">User Password</form:label>
+							<form:label path="userrole">User Role</form:label>
 							<div class="key">
 								<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
 								<form:input type="text" path="userrole" />
 								<div class="clearfix"></div>
 							</div>
-							<form:label path="BillingAddress.billingid">User Password</form:label>
+							<form:label path="BillingAddress.billingid">User Billing ID</form:label>
 							<div class="key">
 								<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
 								<form:input type="text" path="BillingAddress.billingid" />
 								<div class="clearfix"></div>
 							</div>
 
-							<form:label path="ShippingAddress.shippingid">User Password</form:label>
+							<form:label path="ShippingAddress.shippingid">User Shipping id</form:label>
 							<div class="key">
 								<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
 								<form:input type="text" path="ShippingAddress.shippingid" />
 								<div class="clearfix"></div>
 							</div>
 
-							<form:label path="Cart.cartId">User Password</form:label>
+							<form:label path="Cart.cartId">User Cart id</form:label>
 							<div class="key">
 								<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
 								<form:input type="text" path="Cart.cartId" />
 								<div class="clearfix"></div>
 							</div>
-
-
 
 							<h3>Shipping Address</h3>
 
