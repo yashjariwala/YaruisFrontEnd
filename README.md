@@ -75,33 +75,18 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 04-09-2017
+## Changelog as of 18-09-2017
 
--  Show or hide password on login and sign up page.
+- Edit options on the MyAccount page have started working partially work pending!
 
-- Added My account Page to view account details!
+- Show or hide password.
 
-- Updated dependencies 
+- Added My account Page to view account details!  
 
-- Made CSS changes making some visual refinements.  
-
-- Added 404 page
-
-- Added Title bar icons. 
-
-- On the Sign up page added a check box which lets you have the same Billing address as Shipping address.
-
-- Sign up page edited and made as Multi Step form page for a cleaner look.
-
-- The recommended products on the single product page displays automatically without pressing a button.
-
-- In the list of products page it is possible to sort by name or price.
-
-- The recommended products does not show the same product in the list as to the product on the single product page.
 
 ## Known Problems 
 
-- Trying to add edit options to the My Account page so details can be changed or removed..(Working on it and will be added to next commit)
+- 404 page CSS has been removed due to some problems will be resolved!
 
 - Bootstrap related design problems in header and some pages.(will be solved soon) 
 

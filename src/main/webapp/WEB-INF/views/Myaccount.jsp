@@ -28,6 +28,31 @@ body {
 .login-footer {
 	padding: 0.25em 0.5em 0.5em;
 }
+
+a.btn:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+
+a.btn {
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+
+.right {
+	dislpay: inline;
+	float: right;
+	margin-right: 0px
+}
+
+.right a {
+	margin-right: 0px
+}
 </style>
 
 <body>
@@ -38,24 +63,45 @@ body {
 		<div class="login">
 			<div class="main-agileits">
 				<div class="form-w3agile">
-				<h3>Account Details</h3>
-				    <strong>User Name : </strong>${usercustomerobj.username}<br><br>
-					<strong>Email ID : </strong>${usercustomerobj.useremail}<br><br>
-					 <strong>Prone Number : </strong> ${usercustomerobj.userphoneno}<br><br>
-					 <strong>Password : </strong>${usercustomerobj.userpassword} <br>
-					 <br> <strong>Shipping
-						Address  : </strong> 
-<%-- 					<a href="<c:url value='/MyAccount/editshipadd'/>">edit</a> --%>
-						<br /> ${usercustomerobj.shippingAddress.flatno},
+					<h3>Account Details</h3>
+
+					<strong>Personal Info </strong>
+					<div class="right">
+						<a
+							href="<c:url value='/MyAccount/getUserDetails/editpersonalinfo'/>"
+							class="btn btn-primary a-btn-slide-text"> <span
+							class="glyphicon glyphicon-edit" aria-hidden="true"></span> <span><strong>Edit</strong></span></a>
+					</div><br><br>
+
+					<strong>User Name : </strong>${usercustomerobj.username}<br> <br>
+					<strong>Email ID : </strong>${usercustomerobj.useremail}<br> <br>
+					<strong>Phone Number : </strong> ${usercustomerobj.userphoneno}<br>
+					<br> <strong>Password  </strong>
+					<br> <br> <strong>Shipping Address :</strong>
+
+					<div class="right">
+						<a
+							href="<c:url value='/MyAccount/getUserDetails/editshippingaddress'/>"
+							class="btn btn-primary a-btn-slide-text"> <span
+							class="glyphicon glyphicon-edit" aria-hidden="true"></span> <span><strong>Edit</strong></span></a>
+					</div>
+
+					<br /> ${usercustomerobj.shippingAddress.flatno},
 					${usercustomerobj.shippingAddress.buildingname} <br />
 					${usercustomerobj.shippingAddress.localityname} <br /> Landmark:
 					${usercustomerobj.shippingAddress.landmark} <br />
 					${usercustomerobj.shippingAddress.cityname},
 					${usercustomerobj.shippingAddress.statename} <br />
 					${usercustomerobj.shippingAddress.countryname},
-					${usercustomerobj.shippingAddress.zipcode} <br> <br> 
-					<strong>Billing
-						Address : </strong> <br /> ${usercustomerobj.billingAddress.flatno},
+					${usercustomerobj.shippingAddress.zipcode} <br> <br> <strong>Billing
+						Address : </strong>
+					<div class="right">
+						<a
+							href="<c:url value='/MyAccount/getUserDetails/editbillingaddress'/>"
+							class="btn btn-primary a-btn-slide-text"> <span
+							class="glyphicon glyphicon-edit" aria-hidden="true"></span> <span><strong>Edit</strong></span></a>
+					</div>
+					<br /> ${usercustomerobj.billingAddress.flatno},
 					${usercustomerobj.billingAddress.buildingname} <br />
 					${usercustomerobj.billingAddress.localityname} <br /> Landmark:
 					${usercustomerobj.billingAddress.landmark} <br />

@@ -37,15 +37,15 @@ body {
 		<div class="login">
 			<div class="main-agileits">
 				<div class="form-w3agile">
-					<form:form action="${contextPath}/updateshipadd"
-						commandName="shipadata" modelAttribute="shippingaddressobj"
+					<form:form action="${contextPath}/updatebilladd"
+						commandName="billadata" modelAttribute="billingaddressobj"
 						method="post">
-						<h3>Edit Shipping Address</h3>
+						<h3>Edit Billing Address</h3>
 
-						<form:label path="shippingid" hidden="true">Shipping id</form:label>
+						<form:label path="billingid" hidden="true">Shipping id</form:label>
 						<div class="key" hidden="true">
 							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
-							<form:input type="text" path="shippingid" id="n1" hidden="true" />
+							<form:input type="text" path="billingid" id="n1" hidden="true" />
 							<div class="clearfix"></div>
 						</div>
 						<form:label path="flatno">Flat No</form:label>

@@ -17,7 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.yaruis.ecommercebackend.dao.CategoryDAO;
 import com.yaruis.ecommercebackend.model.Category;
-import com.yaruis.ecommercebackend.model.UserCustomer;
 
 @Controller
 public class CategoryController {
