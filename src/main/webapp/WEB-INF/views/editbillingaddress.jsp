@@ -23,7 +23,8 @@ body {
 }
 </style>
 
-<title>Edit Shipping address</title>
+<title>Edit Billing address</title>
+<link rel="shortcut icon" href="${img}/login.png" />
 <link rel="stylesheet" href="${css}/bootstrap.min.css">
 <script src="${js}/jquery.min.js"></script>
 <script src="${js}/bootstrap.min.js"></script>

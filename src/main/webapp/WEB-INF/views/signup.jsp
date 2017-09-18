@@ -164,7 +164,7 @@ input[type=checkbox]:checked+label>span>span {
 								an User? Login</a>
 						</div>
 
-						<form:label path="username">Name</form:label>
+						<form:label path="username">User Name</form:label>
 						<br>
 						<span style="color: #ff0000">${nameMsg} <form:errors
 								path="username" cssClass="error"></form:errors></span>

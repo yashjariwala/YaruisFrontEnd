@@ -15,6 +15,7 @@
 <html>
 <head>
 <title>My Account</title>
+<link rel="shortcut icon" href="${img}/login.png" />
 </head>
 <%@include file="shared/Header.jsp"%>
 <style>
@@ -76,7 +77,7 @@ a.btn {
 					<strong>User Name : </strong>${usercustomerobj.username}<br> <br>
 					<strong>Email ID : </strong>${usercustomerobj.useremail}<br> <br>
 					<strong>Phone Number : </strong> ${usercustomerobj.userphoneno}<br>
-					<br> <strong>Password  </strong>
+					<br> <strong>Password:</strong> Edit to see or make changes to Password!
 					<br> <br> <strong>Shipping Address :</strong>
 
 					<div class="right">

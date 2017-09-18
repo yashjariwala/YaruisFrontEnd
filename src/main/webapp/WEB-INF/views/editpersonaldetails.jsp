@@ -14,6 +14,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>Edit Personal Details</title>
+<link rel="shortcut icon" href="${img}/login.png" />
 <style>
 body {
 	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
@@ -26,8 +28,7 @@ body {
 input[type=checkbox], input[type=radio] {
 	width: 2em;
 	margin: 0;
-	padding-top : 20px;
-	
+	padding-top: 20px;
 	font-size: 1em;
 	opacity: 0; /*This is the part tht actually hides it*/
 }
@@ -37,17 +38,15 @@ input[type=checkbox]+label, input[type=radio]+label {
 	display: inline-block;
 	margin-left: -2em;
 	line-height: 1.5em;
-	padding-top : 12px;
+	padding-top: 12px;
 }
 
 /*unchecked css*/
 input[type=checkbox]+label>span, input[type=radio]+label>span {
 	display: inline-block;
-	background-image:
-		url('${img}/view.png');
+	background-image: url('${img}/view.png');
 	width: 25px;
 	height: 25px;
-	
 }
 
 /*selected checkbox css*/
@@ -56,7 +55,6 @@ input[type=checkbox]:checked+label>span>span {
 	height: 25px;
 	display: block;
 	background-image: url('${img}/hide.png');
-	
 }
 </style>
 
@@ -89,7 +87,9 @@ input[type=checkbox]:checked+label>span>span {
 						<h3>Edit Personal Info</h3>
 						<div align="center">
 							<h4>Name And Email can not be changed!</h4>
-						</div><br><br>
+						</div>
+						<br>
+						<br>
 						<div id="hidden" hidden="true">
 							<form:label path="userid">User ID</form:label>
 							<div class="key">
@@ -98,39 +98,42 @@ input[type=checkbox]:checked+label>span>span {
 								<div class="clearfix"></div>
 							</div>
 						</div>
-						<div id="hidden" hidden="true">
-							<form:label path="username">User Name</form:label>
-							<br> <span style="color: #ff0000">${nameMsg} <form:errors
-									path="username" cssClass="error"></form:errors></span>
-							<div class="key">
-								<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
-								<form:input type="text" path="username" />
-								<div class="clearfix"></div>
-							</div>
 
+						<form:label path="username">User Name</form:label>
+						<br>
+						<span style="color: #ff0000">${nameMsg} <form:errors
+								path="username" cssClass="error"></form:errors></span>
+						<div class="key">
+							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
+							<form:input type="text" path="username" readonly="true" />
+							<div class="clearfix"></div>
+						</div>
 
+						
 							<form:label path="useremail">User Email</form:label>
 							<br> <span style="color: #ff0000">${emailMsg} <form:errors
 									path="useremail" cssClass="error"></form:errors></span>
 							<div class="key">
 								<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
-								<form:input type="text" path="useremail" />
+								<form:input type="text" path="useremail" readonly="true"/>
 								<div class="clearfix"></div>
 							</div>
-						</div>
+					
 						<form:label path="userphoneno">User Phone No</form:label>
 						<div class="key">
 							<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
 							<form:input type="text" path="userphoneno" />
 							<div class="clearfix"></div>
 						</div>
+						<form:label path="userpassword">User Password</form:label>
 						<div class="key">
 							<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
-							<form:input type="password" path="userpassword" id="password" /><input id="check1" type="checkbox"
-								name="check1" value="0" onchange='togglePassword(this);' /><label
-								for="check1"><span><span></span></span></label>
+							<form:input type="password" path="userpassword" id="password" />
+							<input id="check1" type="checkbox" name="check1" value="0"
+								onchange='togglePassword(this);' /><label for="check1"><span><span></span></span></label>
 							<div class="clearfix"></div>
 						</div>
+						
 						<div id="hidden" hidden="true">
 							<form:label path="userrole">User Password</form:label>
 							<div class="key">
