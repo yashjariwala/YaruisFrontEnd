@@ -17,7 +17,7 @@
 <link rel="shortcut icon" href="${img}/login.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="${css}/bootstrap.min.css">
+<link rel="stylesheet" href="${css}/bootstrap.css">
 <script src="${js}/jquery.min.js"></script>
 <script src="${js}/bootstrap.min.js"></script>
 </head>
@@ -65,8 +65,6 @@ input[type=checkbox]:checked+label>span>span {
 	background-image: url('${img}/hide.png');
 	
 }
-
-
 </style>
 <script type="text/javascript">
 	function togglePassword(el) {
@@ -86,9 +84,6 @@ input[type=checkbox]:checked+label>span>span {
 </script>
 <body>
 	<%@include file="shared/Header.jsp"%>
-
-
-
 	<!--content-->
 	<div class="content">
 		<!--login-->
@@ -138,7 +133,6 @@ input[type=checkbox]:checked+label>span>span {
 		<!--login-->
 	</div>
 	<!--content-->
-
 	<%@include file="shared/Footer.jsp"%>
 </body>
 </html>

@@ -17,7 +17,7 @@
 <link rel="shortcut icon" href="${img}/login.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="${css}/bootstrap.min.css">
+<link rel="stylesheet" href="${css}/bootstrap.css">
 <script src="${js}/jquery.min.js"></script>
 <script src="${js}/bootstrap.min.js"></script>
 
@@ -30,42 +30,34 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-attachment: fixed;
 }
-
 /*hide checkbox and radio buttons*/
 input[type=checkbox], input[type=radio] {
 	width: 2em;
 	margin: 0;
-	padding-top : 20px;
-	
+	padding-top: 20px;
 	font-size: 1em;
 	opacity: 0; /*This is the part tht actually hides it*/
 }
-
 /*normalize the spacing*/
 input[type=checkbox]+label, input[type=radio]+label {
 	display: inline-block;
 	margin-left: -2em;
 	line-height: 1.5em;
-	padding-top : 12px;
+	padding-top: 12px;
 }
-
 /*unchecked css*/
 input[type=checkbox]+label>span, input[type=radio]+label>span {
 	display: inline-block;
-	background-image:
-		url('${img}/view.png');
+	background-image: url('${img}/view.png');
 	width: 25px;
 	height: 25px;
-	
 }
-
 /*selected checkbox css*/
 input[type=checkbox]:checked+label>span>span {
 	width: 25px;
 	height: 25px;
 	display: block;
 	background-image: url('${img}/hide.png');
-	
 }
 </style>
 
@@ -151,11 +143,8 @@ input[type=checkbox]:checked+label>span>span {
 		<div class="col-xs-12">
 			<div class="main-agileits">
 				<div class="form-w3agile form1">
-					<h3>Basic Deatils</h3>
-
+					<h3>Basic Details</h3>
 					<!-- <form> -->
-
-
 					<c:url var="addAction" value="/Register/add"></c:url>
 					<form:form action="saveuser" commandName="Userdata">
 
@@ -190,9 +179,9 @@ input[type=checkbox]:checked+label>span>span {
 								path="userpassword" cssClass="error"></form:errors></span>
 						<div class="key">
 							<i class="glyphicon glyphicon-asterisk" aria-hidden="true"></i>
-							<form:input type="password" path="userpassword" id="password" /><input id="check1" type="checkbox"
-								name="check1" value="0" onchange='togglePassword(this);' /><label
-								for="check1"><span><span></span></span></label>
+							<form:input type="password" path="userpassword" id="password" />
+							<input id="check1" type="checkbox" name="check1" value="0"
+								onchange='togglePassword(this);' /><label for="check1"><span><span></span></span></label>
 							<div class="clearfix"></div>
 						</div>
 
@@ -219,14 +208,9 @@ input[type=checkbox]:checked+label>span>span {
 
 	<div class="row setup-content" id="step-2">
 		<div class="col-xs-12">
-
 			<div class="main-agileits">
 				<div class="form-w3agile form1">
-
-
-
 					<h3>Shipping Address</h3>
-
 					<form:label path="shippingAddress.flatno">Flat No</form:label>
 					<div class="key">
 						<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
@@ -283,36 +267,23 @@ input[type=checkbox]:checked+label>span>span {
 						<form:input path="shippingAddress.zipcode" id="n8" />
 						<div class="clearfix"></div>
 					</div>
-
-
-
 					<br> <input type="checkbox" name="billingtoo"
 						onclick="FillBilling(this.form)"> <em>Check this box
 						if Shipping Address and Billing Address are the same.</em> <br> <br>
 					<br>
-
-
 					<button id="activate-step-3" class="btn btn-primary btn-md"
 						onclick="topFunction()">Billing Address</button>
 				</div>
 			</div>
 		</div>
-
 	</div>
-
-	<!-- 			<div class="container"> -->
 
 	<div class="row setup-content" id="step-3">
 		<div class="col-xs-12">
 			<div class="main-agileits">
 				<div class="form-w3agile form1">
-
-
 					<!--billing address -->
 					<h3>Billing Address</h3>
-
-
-
 					<form:label path="billingAddress.flatno">Flat No</form:label>
 					<div class="key">
 						<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
@@ -370,12 +341,14 @@ input[type=checkbox]:checked+label>span>span {
 						<div class="clearfix"></div>
 					</div>
 					<br> <input type="submit" value="Submit">
-					</form:form>
+
 				</div>
 			</div>
 		</div>
-
 	</div>
+
+	</form:form>
+
 
 	<script>
 		function topFunction() {

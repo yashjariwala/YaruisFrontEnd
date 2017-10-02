@@ -105,7 +105,7 @@ input[type=radio] {
 				<div class="container">
 					<div class="single-grids">
 						<div class="col-md-9 single-grid">
-							<div clas="single-top">
+							<div class="single-top">
 								<div class="single-left">
 									<div class="flexslider">
 

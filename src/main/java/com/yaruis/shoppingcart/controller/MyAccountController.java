@@ -14,11 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.yaruis.ecommercebackend.dao.BillingAddressDAO;
-import com.yaruis.ecommercebackend.dao.CartDAO;
 import com.yaruis.ecommercebackend.dao.ShippingAddressDAO;
 import com.yaruis.ecommercebackend.dao.UserDAO;
 import com.yaruis.ecommercebackend.model.BillingAddress;
-import com.yaruis.ecommercebackend.model.Cart;
 import com.yaruis.ecommercebackend.model.ShippingAddress;
 import com.yaruis.ecommercebackend.model.UserCustomer;
 
@@ -33,9 +31,6 @@ public class MyAccountController {
 
 	@Autowired
 	private BillingAddressDAO billdao;
-
-	@Autowired
-	private CartDAO catdao;
 
 	@RequestMapping("/**/MyAccount/**/getUserDetails")
 	public ModelAndView getuserid(Model model) {
@@ -105,9 +100,6 @@ public class MyAccountController {
 		} else {
 
 			udao.update(reg);
-			User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-			String userid = user.getUsername();
-			UserCustomer userdata = udao.get(userid);
 			return "redirect:/MyAccount/getUserDetails";
 		}
 

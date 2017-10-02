@@ -75,18 +75,15 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 18-09-2017
+## Changelog as of 02-10-2017
 
-- Edit options on the MyAccount page have started working partially work pending!
+- Images were compressed to load faster on slow devices!
 
-- Show or hide password.
+- New themes have been added to 404 page and 403 page.
 
-- Added My account Page to view account details!  
-
+- My account page now works as expected.
 
 ## Known Problems 
-
-- 404 page CSS has been removed due to some problems will be resolved!
 
 - Bootstrap related design problems in header and some pages.(will be solved soon) 
 
