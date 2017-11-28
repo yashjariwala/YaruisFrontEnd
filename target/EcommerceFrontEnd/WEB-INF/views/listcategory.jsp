@@ -92,7 +92,7 @@ input[type=text] {
 
 		<div class="content">
 			<div class="login">
-				<div class="main-agileits">
+				<div class="main-wide-agileits">
 					<div class="form-w3agile">
 						<h3>Category List</h3>
 
@@ -100,7 +100,7 @@ input[type=text] {
 							<tr>
 								<th width="80">Category ID</th>
 								<th width="120">Category Name</th>
-								<th width="120">Category Description</th>
+								<th width="300">Category Description</th>
 								<th width="60">Edit</th>
 								<th width="60">Delete</th>
 							</tr>

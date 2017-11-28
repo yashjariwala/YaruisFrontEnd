@@ -97,7 +97,6 @@ input[type=radio] {
 
 		<c:url value="/resources/images/${productObject.productname}.jpg"
 			var="imgg" />
-
 		<!--content-->
 		<div class="content">
 			<!--single-->
@@ -120,6 +119,7 @@ input[type=radio] {
 								<br>
 								<br>
 								<div class="single-right simpleCart_shelfItem">
+								<br>
 									<h4>${productObject.productname}</h4>
 									<h5>${productObject.categoryname}</h5>
 									<div class="block">

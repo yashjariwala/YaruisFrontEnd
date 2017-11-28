@@ -30,6 +30,26 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	background-attachment: fixed;
 }
+
+.billingequalsshipping {
+	background-color: white;
+	color: black;
+	border: 2px solid #008CBA;
+	padding: 16px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.billingequalsshipping:hover {
+	background-color: #008CBA;
+	color: white;
+}
+
 /*hide checkbox and radio buttons*/
 input[type=checkbox], input[type=radio] {
 	width: 2em;
@@ -63,7 +83,7 @@ input[type=checkbox]:checked+label>span>span {
 
 <script>
 	function FillBilling(f) {
-		confirm("Are you sure you want the same billing and shipping address!");
+		confirm("Billing Address and Shipping Address will be Same!");
 		var n1 = document.getElementById('n1');
 		var n2 = document.getElementById('n2');
 		var n3 = document.getElementById('n3');
@@ -82,17 +102,15 @@ input[type=checkbox]:checked+label>span>span {
 		var n15 = document.getElementById('n15');
 		var n16 = document.getElementById('n16');
 
-		if (f.billingtoo.checked == true) {
-			f.n9.value = f.n1.value;
-			f.n10.value = f.n2.value;
-			f.n11.value = f.n3.value;
-			f.n12.value = f.n4.value;
-			f.n13.value = f.n5.value;
-			f.n14.value = f.n6.value;
-			f.n15.value = f.n7.value;
-			f.n16.value = f.n8.value;
+		f.n9.value = f.n1.value;
+		f.n10.value = f.n2.value;
+		f.n11.value = f.n3.value;
+		f.n12.value = f.n4.value;
+		f.n13.value = f.n5.value;
+		f.n14.value = f.n6.value;
+		f.n15.value = f.n7.value;
+		f.n16.value = f.n8.value;
 
-		}
 	}
 </script>
 <script type="text/javascript">
@@ -196,9 +214,10 @@ input[type=checkbox]:checked+label>span>span {
 							<div class="clearfix"></div>
 						</div>
 						<br>
-
-						<button id="activate-step-2" class="btn btn-primary btn-md"
-							onclick="topFunction()">Shipping Address</button>
+						<div align="center">
+							<button id="activate-step-2" class="btn btn-primary btn-md"
+								onclick="topFunction()">Shipping Address</button>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -267,12 +286,16 @@ input[type=checkbox]:checked+label>span>span {
 						<form:input path="shippingAddress.zipcode" id="n8" />
 						<div class="clearfix"></div>
 					</div>
-					<br> <input type="checkbox" name="billingtoo"
-						onclick="FillBilling(this.form)"> <em>Check this box
-						if Shipping Address and Billing Address are the same.</em> <br> <br>
+
 					<br>
-					<button id="activate-step-3" class="btn btn-primary btn-md"
-						onclick="topFunction()">Billing Address</button>
+					<div align="center">
+						<input type="button" name="billingtoo"
+							class="billingequalsshipping" onclick="FillBilling(this.form)"
+							Value="Billing Address same as Shipping Address?"> <br>
+						<br> <br>
+						<button id="activate-step-3" class="btn btn-primary btn-md"
+							onclick="topFunction()">Billing Address</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -284,6 +307,14 @@ input[type=checkbox]:checked+label>span>span {
 				<div class="form-w3agile form1">
 					<!--billing address -->
 					<h3>Billing Address</h3>
+					
+							
+					<div align="center">
+						<input type="button" name="billingtoo"
+							class="billingequalsshipping" onclick="FillBilling(this.form)"
+							Value="Billing Address same as Shipping Address?"> <br>
+						<br> <br></div>
+					
 					<form:label path="billingAddress.flatno">Flat No</form:label>
 					<div class="key">
 						<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
@@ -340,8 +371,10 @@ input[type=checkbox]:checked+label>span>span {
 						<form:input path="billingAddress.zipcode" id="n16" />
 						<div class="clearfix"></div>
 					</div>
-					<br> <input type="submit" value="Submit">
-
+					<br>
+					<div align="center">
+						<input type="submit" value="Submit">
+					</div>
 				</div>
 			</div>
 		</div>

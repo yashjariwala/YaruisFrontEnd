@@ -86,7 +86,7 @@ input[type=text] {
 
 		<div class="content">
 			<div class="login">
-				<div class="main-agileits">
+				<div class="main-wide-agileits">
 					<div class="form-w3agile">
 						<h3>Items in your Cart</h3>
 						<div class="table-responsive">

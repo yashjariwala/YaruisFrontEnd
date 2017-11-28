@@ -69,7 +69,7 @@ body {
 
 	<div class="content">
 		<div class="login">
-			<div class="main-agileits">
+			<div class="main-wide-agileits">
 				<div class="form-w3agile">
 					<h3>Users List</h3>
 

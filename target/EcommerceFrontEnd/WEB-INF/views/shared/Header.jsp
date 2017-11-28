@@ -9,14 +9,10 @@
 <spring:url value="/resources/js" var="js" />
 <spring:url value="/resources/images" var="img" />
 <spring:url value="/resources/fonts" var="fonts" />
-
 <!DOCTYPE HTML>
 <html>
-
 <head>
 <title>Yaruis Home</title>
-
-
 <!--css-->
 <link href="${css}/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
@@ -26,8 +22,6 @@
 <!--css-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
 <script src="${js}/jquery.min.js"></script>
 <link href='//fonts.googleapis.com/css?family=Cagliostro'
 	rel='stylesheet' type='text/css'>
@@ -47,18 +41,7 @@
 		});
 	});
 </script>
-
-
-
-<script type="text/javascript" src="${js}/bootstrap-3.1.1.min.js"></script>
-
-<!-- cart -->
-<!--start-rate-->
-<script src="${js}/jstarbox.js"></script>
-<link rel="stylesheet" href="${css}/jstarbox.css" type="text/css"
-	media="screen" charset="utf-8" />
-
-
+<script type="text/javascript" src="${js}/bootstrap.min.js"></script>
 <header>
 
 	<div class="header">
@@ -79,7 +62,9 @@
 
 							<li><a>Welcome:
 									${pageContext.request.userPrincipal.name}</a></li>
+							<li><a href="<c:url value='/MyAccount/getUserDetails'/>">My Account</a>
 							<li><a href="<c:url value='/Logout'/>">Logout</a></li>
+							
 
 						</c:if>
 

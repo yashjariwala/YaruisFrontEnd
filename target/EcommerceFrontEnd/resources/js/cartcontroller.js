@@ -1,29 +1,21 @@
+
 var myapp = angular.module("myapp", []).controller(
 		'productsController',
 		function($scope, $http) {
-			// alert('Yash');
-
 			$scope.onloadFun = function() {
-//				alert(1);
 			}
 
 			$scope.listProduct = function() {
-				// alert('before contol call');
 				$http.get('/EcommerceFrontEnd/listproductsjson').success(
 						function(data) {
-							// alert('after contol call');
-
 							$scope.products = data;
 							console.log(data);
-							console.log('after contol call1');
 						})
 			}
 
 			$scope.addToCart = function(productid) {
-
 				$http.put('/EcommerceFrontEnd/cart/add/' + productid).success(
 						function() {
-
 							alert('Added Successfully to the cart!');
 						})
 			}
@@ -39,7 +31,6 @@ var myapp = angular.module("myapp", []).controller(
 				$scope.cartId = cartId;
 				// $scope.refreshCart(cartId);
 				$scope.refreshCart();
-				// alert('Successfully refreshed the cart!');
 			}
 
 			$scope.removeFromCart = function(cartitemid) {

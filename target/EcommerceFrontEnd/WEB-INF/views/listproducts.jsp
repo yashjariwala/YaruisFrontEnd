@@ -26,7 +26,6 @@ body {
 	background-attachment: fixed;
 }
 
-
 input[type=text]:focus {
 	width: 80%;
 }
@@ -194,7 +193,6 @@ input[type=radio]:checked+label {
 		}
 	}
 </script>
-
 <%@include file="shared/Header.jsp"%>
 <body ng-app="prodapp" ng-controller="myprodController"
 	ng-init="listProduct()">
@@ -269,7 +267,7 @@ input[type=radio]:checked+label {
 		<!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Sort Products</span> -->
 		<div class="content">
 			<div class="login">
-				<div class="main-agileits">
+				<div class="main-wide-agileits">
 					<div class="form-w3agile">
 						<h3>Product List</h3>
 						<div class="table-responsive">
@@ -310,8 +308,8 @@ input[type=radio]:checked+label {
 									<c:url value="/resources/images/{{p.productname}}.jpg"
 										var="imgg" />
 
-									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><img
-											src="${imgg}" alt="prodimage" height="80" width="80" /></td>
+									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>">
+										<img src="${imgg}" alt="prodimage" height="80" width="80" /></a></td>
 									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><span
 											class="glyphicon glyphicon-info-sign"></span></a></td>
 									<security:authorize access="hasRole('ROLE_ADMIN')">

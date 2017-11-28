@@ -12,10 +12,11 @@
  http://www.springframework.org/schema/webflow-config  
  http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.0.xsd">
 
-	<context:component-scan base-package="com" />
+<mvc:annotation-driven></mvc:annotation-driven>
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com"></context:component-scan>
 	<mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
 	<!-- <mvc:default-servelet-handler /> -->
-	<mvc:annotation-driven />
 	
 	
 
@@ -30,11 +31,8 @@
 			id="checkout" />
 	</webflow-config:flow-registry>
 
-
-
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
-
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

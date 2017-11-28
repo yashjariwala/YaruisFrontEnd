@@ -6,3 +6,4 @@ com\yaruis\shoppingcart\controller\ProductaddController.class
 com\yaruis\shoppingcart\controller\CartItemController.class
 com\yaruis\shoppingcart\controller\HomeContoller.class
 com\yaruis\shoppingcart\controller\SupplierController.class
+com\yaruis\shoppingcart\controller\MyAccountController.class

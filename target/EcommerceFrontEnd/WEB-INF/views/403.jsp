@@ -12,38 +12,88 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<html>
 <head>
 <title>Forbidden</title>
 <link rel="shortcut icon" href="${img}/no.png" />
 </head>
-<style>
-body {
-	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
-	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
-	background-attachment: fixed;
-}
 
-</style>
-
-<html>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="${css}/base.css">
+<link rel="stylesheet" href="${css}/main.css">
+<link rel="stylesheet" href="${css}/vendor.css">
+<script src="${js}/modernizr.js"></script>
 <body>
-	<%@include file="shared/Header.jsp"%>
-	<!--content-->
-	<div class="content">
-		<!--login-->
-		<div class="login">
-			<div class="main-agileits">
-				<div class="form-w3agile">
-					<h3>Access is denied</h3>
-					<div align="center">
-						<h4>${msg}</h4>
-					</div>
+
+	<!-- header 
+   ================================================== -->
+	<header class="main-header">
+		<div class="row"></div>
+	</header>
+	<!-- /header -->
+
+
+
+	<!-- main content
+   ================================================== -->
+	<main id="main-404-content" class="main-content-particle-js">
+
+
+	<div class="content-wrap">
+
+		<div class="shadow-overlay"></div>
+
+		<div class="main-content">
+			<div class="row">
+				<div class="col-twelve">
+
+					<a href="<c:url value='/Home'/>"><h2>Yaruis</h2> </a>
+
+					<h1 class="kern-this">403 Error.</h1>
+					<p>${msg} Maybe try on of the links below or just enjoy effects!</p>
+
 				</div>
+				<!-- /twelve -->
 			</div>
+			<!-- /row -->
 		</div>
+		<!-- /main-content -->
+
+		<footer>
+			<div class="row">
+
+
+
+				<div class="col-five tab-full bottom-links">
+					<ul class="links">
+						<li><a href="<c:url value='/Home'/>">Home</a></li>
+						<li><a href="<c:url value='/AboutUs'/>">About</a></li>
+						<li><a href="mailto:yaruisshopanywhere@gmail.com">Report
+								Error</a></li>
+					</ul>
+
+
+				</div>
+
+			</div>
+			<!-- /row -->
+		</footer>
+
+	</div>
+	<!-- /content-wrap --> </main>
+	<!-- /main-404-content -->
+
+	<div id="preloader">
+		<div id="loader"></div>
 	</div>
 
-	<%@include file="shared/Footer.jsp"%>
+	<!-- Java Script
+   ================================================== -->
+	<script src="${js}/jquery.min.js"></script>
+	<script src="${js}/plugins.js"></script>
+	<script src="${js}/main.js"></script>
+
 </body>
+
 </html>

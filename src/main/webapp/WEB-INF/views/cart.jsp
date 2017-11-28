@@ -121,7 +121,8 @@ input[type=text] {
 
 
 								<a href="${url}" class="btn btn-default"> Continue shopping</a>
-							</div>
+							</div><br>
+							
 							<div>
 								<a class="btn btn-danger pull-left" ng-click="clearCart()">
 									<span class="glyphicon glyphicon-remove-sign"> </span> Clear

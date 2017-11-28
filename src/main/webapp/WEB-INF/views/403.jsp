@@ -51,7 +51,7 @@
 					<a href="<c:url value='/Home'/>"><h2>Yaruis</h2> </a>
 
 					<h1 class="kern-this">403 Error.</h1>
-					<p>${msg} Maybe try on of the links below or just move your mouse on page for the effects!</p>
+					<p>${msg} Maybe try on of the links below or just enjoy effects!</p>
 
 				</div>
 				<!-- /twelve -->

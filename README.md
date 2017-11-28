@@ -75,7 +75,9 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 02-10-2017
+## Changelog as of 28-11-2017
+
+- Solved Bootstrap related design problems in header and some pages.
 
 - Images were compressed to load faster on slow devices!
 
@@ -83,9 +85,12 @@ And Update both maven projects.
 
 - My account page now works as expected.
 
-## Known Problems 
+## Upcoming Ideas! (Not surely coming!)
 
-- Bootstrap related design problems in header and some pages.(will be solved soon) 
+- Delete user account from the my account page.
+
+-  Redesign of the table on the products page showing all projects. 
+
 
 ## Project made by Yash Jariwala 
 

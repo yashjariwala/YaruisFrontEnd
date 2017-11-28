@@ -71,7 +71,7 @@
 
 					<h1 class="kern-this">404 Error.</h1>
 					<p>Yaay! you found our 404 page! Looks like nothing was found
-						at this location. Maybe try on of the links below or just move your mouse on page for the effects!</p>
+						at this location. Maybe try on of the links below or just enjoy the effects!</p>
 
 				</div>
 				<!-- /twelve -->

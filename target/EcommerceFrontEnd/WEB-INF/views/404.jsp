@@ -11,40 +11,109 @@
 <spring:url value="/resources/js" var="js" />
 <spring:url value="/resources/images" var="img" />
 <spring:url value="/resources/fonts" var="fonts" />
-<head>
-<title>404</title>
-<link rel="shortcut icon" href="${img}/no.png" />
-</head>
-<style>
-body {
-	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
-	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
-	background-attachment: fixed;
-}
-</style>
-
+<!DOCTYPE html>
 <html>
+<head>
+
+<!--- basic page needs
+   ================================================== -->
+<meta charset="utf-8">
+<title>Yaruis 404</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- mobile specific metas
+   ================================================== -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- CSS
+   ================================================== -->
+<link rel="stylesheet" href="${css}/base.css">
+<link rel="stylesheet" href="${css}/main.css">
+<link rel="stylesheet" href="${css}/vendor.css">
+
+<!-- script
+   ================================================== -->
+<script src="${js}/modernizr.js"></script>
+
+<!-- favicons
+	================================================== -->
+<link rel="icon" type="image/png" href="${img}/y.png">
+
+</head>
+
 <body>
-	<%@include file="shared/Header.jsp"%>
-	<!--content-->
-	<div class="content">
-		<!--login-->
-		<div class="login">
-			<div class="main-agileits">
-				<div class="form-w3agile">
-					<h3>404 Page not found</h3>
-					<div align="center">
-						<c:url value="/Home" var="url"></c:url>
-						<h4>
-							Lost Somewhere? Let's go back <a href="${url}">Home!</a>
-						</h4>
-					</div>
+
+	<!-- header 
+   ================================================== -->
+	<header class="main-header">
+		<div class="row"></div>
+	</header>
+	<!-- /header -->
+
+
+
+	<!-- main content
+   ================================================== -->
+	<main id="main-404-content" class="main-content-particle-js">
+
+
+	<div class="content-wrap">
+
+		<div class="shadow-overlay"></div>
+
+		<div class="main-content">
+			<div class="row">
+				<div class="col-twelve">
+
+					<a href="<c:url value='/Home'/>"><h2>Yaruis</h2> </a>
+
+					<h1 class="kern-this">404 Error.</h1>
+					<p>Yaay! you found our 404 page! Looks like nothing was found
+						at this location. Maybe try on of the links below or just enjoy the effects!</p>
+
 				</div>
+				<!-- /twelve -->
 			</div>
+			<!-- /row -->
 		</div>
+		<!-- /main-content -->
+
+		<footer>
+			<div class="row">
+
+
+
+				<div class="col-five tab-full bottom-links">
+					<ul class="links">
+						<li><a href="<c:url value='/Home'/>">Home</a></li>
+						<li><a href="<c:url value='/AboutUs'/>">About</a></li>
+						<li><a href="mailto:yaruisshopanywhere@gmail.com">Report
+								Error</a></li>
+					</ul>
+
+
+				</div>
+
+			</div>
+			<!-- /row -->
+		</footer>
+
+	</div>
+	<!-- /content-wrap --> </main>
+	<!-- /main-404-content -->
+
+	<div id="preloader">
+		<div id="loader"></div>
 	</div>
 
-	<%@include file="shared/Footer.jsp"%>
+	<!-- Java Script
+   ================================================== -->
+	<script src="${js}/jquery.min.js"></script>
+	<script src="${js}/plugins.js"></script>
+	<script src="${js}/main.js"></script>
+
 </body>
+
 </html>
