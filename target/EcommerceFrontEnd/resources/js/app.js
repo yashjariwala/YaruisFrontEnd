@@ -1,5 +1,23 @@
 /// <reference path="./angular.min.js"/>
 
+//search for location
+var app = angular.module("locapp", []).controller(
+		'mylocController',
+		function($scope, $http) {
+			$scope.listLocation = function() {
+				$http.get('/EcommerceFrontEnd/listlocjson').success(
+						function(data) {
+
+							$scope.locations = data;
+							console.log(data);
+							console.log('loc');
+						})
+
+			}
+
+		})
+
+
 //search for supplier
 var app = angular.module("app", []).controller(
 		'mysController',

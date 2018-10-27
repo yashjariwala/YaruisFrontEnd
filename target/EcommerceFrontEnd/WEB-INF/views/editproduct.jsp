@@ -58,7 +58,7 @@ body {
 }
 </style>
 <head>
-<title>Yaruis Edit Product</title>
+<title>Edit Product</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

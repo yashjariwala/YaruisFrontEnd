@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="copy-left">
 				<p>
-					&copy; 2016-2017 Yaruis. All rights reserved | Design by <a
+					&copy; 2016-2018 Yaruis. All rights reserved | Design by <a
 						href="https://www.facebook.com/yashjariwala96">YashJariwala@NIIT</a>
 				</p>
 			</div>

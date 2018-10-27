@@ -2365,7 +2365,7 @@ p.quote {
 }
 
 
-.key  input[type="text"], .key  input[type="password"] {
+.key  input[type="text"], .key  input[type="password"], .key  input[type="email"] {
 	width: 75%;
 	padding: 10px 10px;
 	font-size: 1em;
@@ -3163,7 +3163,7 @@ li.bt-nn h6 {
 		margin-left: 0;
 	}
 	.dropdown-menu.columns-3 {
-		min-width: 263px;
+		min-width: 5px;
 		padding: 30px 30px;
 	}
 	.multi-gd-img {

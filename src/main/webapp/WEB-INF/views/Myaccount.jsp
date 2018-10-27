@@ -54,6 +54,29 @@ a.btn {
 .right a {
 	margin-right: 0px
 }
+
+.delete a {
+	background: #fdb515;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 10px 0;
+	border: none;
+	font-size: 1em;
+	outline: none;
+	width: 70%;
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+
+.delete  a:hover {
+	background: #db3236;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+
 </style>
 
 <body>
@@ -111,9 +134,21 @@ a.btn {
 					${usercustomerobj.billingAddress.countryname},
 					${usercustomerobj.billingAddress.zipcode}
 				</div>
+				<br>
+				<div align="center" class="delete">
+						<a
+							href="<c:url value='/MyAccount/deleteuser'/>"
+							class="btn btn-primary a-btn-slide-text"> <span
+							 aria-hidden="true"></span> <span><strong>Delete Your Account</strong></span></a>
+					</div>
+				
+				
+				
 			</div>
 		</div>
 	</div>
+
+	
 	<%@include file="shared/Footer.jsp"%>
 </body>
 </html>

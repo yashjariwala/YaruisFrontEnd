@@ -15,7 +15,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Yaruis Category list</title>
+<title>Category List</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 </head>
 <style type="text/css">

@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Yaruis Add Product</title>
+<title>Add Product</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

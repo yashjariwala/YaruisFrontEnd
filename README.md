@@ -71,25 +71,40 @@ And Update both maven projects.
 
 - Once registered as Admin then login, add category and supplier and then add product.
 
+- Before adding a product check paths in productaddcontroller.java for images of products and refresh the images folder after adding products otherwise the image wont load.  
+
 - Once added the products users are ready to shop.
+
+- Change the url of image in Email.java so that header image goes while sending the mail.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 28-11-2017
+## Changelog as of 06-03-2018
+
+- Forgot password has been successfully implemented a mail with reset link is sent which lets change the password.
+
+- Forgot User name has been successfully implemented mail with user name is sent.
+
+- Many under the hood Improvements.
+
+- Email was completely revamped from plain text based email to bootstrap based email template.
+
+- Delete User was added to the my accounts page.
+
+- Recommended Products does not show Recommended Products Table if no products are found in same category on the products page.
 
 - Solved Bootstrap related design problems in header and some pages.
 
-- Images were compressed to load faster on slow devices!
-
-- New themes have been added to 404 page and 403 page.
-
-- My account page now works as expected.
 
 ## Upcoming Ideas! (Not surely coming!)
 
-- Delete user account from the my account page.
+- Change carousel images to be added to admin login.
 
--  Redesign of the table on the products page showing all projects. 
+- Password and confirm password boxes coming soon with stronger password implementation.
+
+- Showing of all orders in the Admin account and showing my orders after login of individual accounts.
+
+- Redesign of the table on the products page showing all projects. 
 
 
 ## Project made by Yash Jariwala 

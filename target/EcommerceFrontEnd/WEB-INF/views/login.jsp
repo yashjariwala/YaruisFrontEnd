@@ -35,8 +35,7 @@ body {
 input[type=checkbox], input[type=radio] {
 	width: 2em;
 	margin: 0;
-	padding-top : 20px;
-	
+	padding-top: 20px;
 	font-size: 1em;
 	opacity: 0; /*This is the part tht actually hides it*/
 }
@@ -46,17 +45,15 @@ input[type=checkbox]+label, input[type=radio]+label {
 	display: inline-block;
 	margin-left: -2em;
 	line-height: 1.5em;
-	padding-top : 12px;
+	padding-top: 12px;
 }
 
 /*unchecked css*/
 input[type=checkbox]+label>span, input[type=radio]+label>span {
 	display: inline-block;
-	background-image:
-		url('${img}/view.png');
+	background-image: url('${img}/view.png');
 	width: 25px;
 	height: 25px;
-	
 }
 
 /*selected checkbox css*/
@@ -65,7 +62,6 @@ input[type=checkbox]:checked+label>span>span {
 	height: 25px;
 	display: block;
 	background-image: url('${img}/hide.png');
-	
 }
 </style>
 <script type="text/javascript">
@@ -102,6 +98,7 @@ input[type=checkbox]:checked+label>span>span {
 					<br>
 					<form action="<c:url value="j_spring_security-check"/> "
 						method="post">
+						<label>User Name</label>
 						<div class="key">
 							<i class="fa fa-user" aria-hidden="true"></i> <input type="text"
 								value="User Name" name="j_User_id" onfocus="this.value = '';"
@@ -109,7 +106,7 @@ input[type=checkbox]:checked+label>span>span {
 								required="">
 							<div class="clearfix"></div>
 						</div>
-
+						<label>Password</label>
 						<div class="key">
 							<i class="fa fa-lock" aria-hidden="true"></i> <input
 								id="password" type="password" value="Password"
@@ -126,7 +123,8 @@ input[type=checkbox]:checked+label>span>span {
 					</form>
 				</div>
 				<div class="forg">
-					<a href="<c:url value='/ContactUs'/>" class="forg-left">Forgot
+					<a href="<c:url value='/forgotUsername'/>" class="forg-left">Forgot
+						User Name</a><a>|</a> <a href="<c:url value='/forgotPassword'/>">Forgot
 						Password</a> <a href="<c:url value='/Register'/>" class="forg-right">Register</a>
 					<div class="clearfix"></div>
 				</div>

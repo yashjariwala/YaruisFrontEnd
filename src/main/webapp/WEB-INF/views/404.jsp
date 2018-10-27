@@ -18,7 +18,7 @@
 <!--- basic page needs
    ================================================== -->
 <meta charset="utf-8">
-<title>Yaruis 404</title>
+<title>Page Not Found</title>
 <meta name="description" content="">
 <meta name="author" content="">
 

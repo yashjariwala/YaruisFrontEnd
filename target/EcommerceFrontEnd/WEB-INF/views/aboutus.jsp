@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Yaruis About Us</title>
+<title>About Us</title>
 <link rel="shortcut icon" href="${img}/about.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

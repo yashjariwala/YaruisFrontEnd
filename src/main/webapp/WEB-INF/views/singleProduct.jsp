@@ -86,6 +86,8 @@ input[type=radio] {
 }
 </style>
 
+
+
 <body ng-app="myapp" ng-controller="productsController">
 
 
@@ -116,17 +118,16 @@ input[type=radio] {
 
 									</div>
 								</div>
-								<br>
-								<br>
+								<br> <br>
 								<div class="single-right simpleCart_shelfItem">
-								<br>
+									<br>
 									<h4>${productObject.productname}</h4>
 									<h5>${productObject.categoryname}</h5>
 									<div class="block">
 										<div class="starbox small ghosting"></div>
 									</div>
 									<p class="price item_price">Rs.
-										${productObject.productprice}</p>
+										${productObject.productprice}/-</p>
 									<div class="description">
 										<p>
 											<span>Quick Overview : </span>
@@ -148,11 +149,13 @@ input[type=radio] {
 										<!-- when user logged in -->
 										<c:if
 											test="${pageContext.request.userPrincipal.name != null }">
+											
+											<security:authorize access="!hasRole('ROLE_ADMIN')">
 
 											<a ng-click="addToCart(${productObject.productid})"
 												data-text="Add To Cart" class="my-cart-yash item_add">Add
 												To Cart</a>
-
+											</security:authorize>
 										</c:if>
 
 
@@ -172,9 +175,9 @@ input[type=radio] {
 
 										<c:url value="/listproduct" var="url"></c:url>
 
+										<br> <br> <a href="${url}"
+											class="my-cart-yash item_add"> Continue shopping</a> <br>
 										<br>
-										<br> <a href="${url}" class="my-cart-yash item_add">
-											Continue shopping</a> <br> <br>
 
 
 										<h2>
@@ -208,7 +211,7 @@ input[type=radio] {
 							<div class="form-w3agile">
 
 								<div ng-init="listProduct()">
-									<h3>Recommended Products</h3>
+									<h3>Similar Products</h3>
 									<table class="tg">
 										<tr>
 											<th width="160">Product Name</th>
@@ -246,13 +249,19 @@ input[type=radio] {
 		};
 
 		function scrollFunction() {
-			if (document.body.scrollTop > 2
-					|| document.documentElement.scrollTop > 2) {
+			if (document.body.scrollTop > 0
+					|| document.documentElement.scrollTop > 0) {
 				document.getElementById("recprodrad").click();
 				document.getElementById("sameprod").click();
 			}
+
+			if ($(".tg td").length > 0) {
+			} else {
+				$('.inside').hide();
+			}
 		}
 	</script>
+
 
 
 </body>

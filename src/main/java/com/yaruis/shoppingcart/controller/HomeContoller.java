@@ -27,6 +27,9 @@ public class HomeContoller {
 		ModelAndView model = new ModelAndView("contactus");
 		return model;
 	}
+	
+
+	
 
 	// for 403 access denied page
 	@RequestMapping(value = "/403", method = RequestMethod.GET)

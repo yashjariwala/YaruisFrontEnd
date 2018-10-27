@@ -12,7 +12,7 @@
 <spring:url value="/resources/fonts" var="fonts" />
 <!DOCTYPE html>
 <html lang="en">
-<title>Yaruis Add Supplier</title>
+<title>Add Supplier</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 <style>
 body {

@@ -10,10 +10,11 @@
 <spring:url value="/resources/js" var="js" />
 <spring:url value="/resources/images" var="img" />
 <spring:url value="/resources/fonts" var="fonts" />
+<spring:url value="/resources/json" var="json" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Yaruis SignUp</title>
+<title>SignUp</title>
 <link rel="shortcut icon" href="${img}/login.png" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,15 +22,36 @@
 <script src="${js}/jquery.min.js"></script>
 <script src="${js}/bootstrap.min.js"></script>
 
+
 </head>
 
 <style>
 body {
 	background: url("${img}/profilebg.jpg") no-repeat 0px 0px;
 	background-size: cover;
-	font-family: 'Open Sans', sans-serif;
+	z font-family: 'Open Sans', sans-serif;
 	background-attachment: fixed;
 }
+
+.billingequalsshipping {
+	background-color: white;
+	color: black;
+	border: 2px solid #008CBA;
+	padding: 16px 25px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 12px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+
+.billingequalsshipping:hover {
+	background-color: #008CBA;
+	color: white;
+}
+
 /*hide checkbox and radio buttons*/
 input[type=checkbox], input[type=radio] {
 	width: 2em;
@@ -63,36 +85,34 @@ input[type=checkbox]:checked+label>span>span {
 
 <script>
 	function FillBilling(f) {
-		confirm("Are you sure you want the same billing and shipping address!");
+		confirm("Are Billing Address and Shipping Address same?");
 		var n1 = document.getElementById('n1');
 		var n2 = document.getElementById('n2');
 		var n3 = document.getElementById('n3');
 		var n4 = document.getElementById('n4');
-		var n5 = document.getElementById('n5');
-		var n6 = document.getElementById('n6');
-		var n7 = document.getElementById('n7');
+		var n5 = document.getElementById('country');
+		var n6 = document.getElementById('state');
+		var n7 = document.getElementById('city');
 		var n8 = document.getElementById('n8');
 
 		var n9 = document.getElementById('n9');
 		var n10 = document.getElementById('n10');
 		var n11 = document.getElementById('n11');
 		var n12 = document.getElementById('n12');
-		var n13 = document.getElementById('n13');
-		var n14 = document.getElementById('n14');
-		var n15 = document.getElementById('n15');
+		var n13 = document.getElementById('Country');
+		var n14 = document.getElementById('State');
+		var n15 = document.getElementById('City');
 		var n16 = document.getElementById('n16');
 
-		if (f.billingtoo.checked == true) {
-			f.n9.value = f.n1.value;
-			f.n10.value = f.n2.value;
-			f.n11.value = f.n3.value;
-			f.n12.value = f.n4.value;
-			f.n13.value = f.n5.value;
-			f.n14.value = f.n6.value;
-			f.n15.value = f.n7.value;
-			f.n16.value = f.n8.value;
+		f.n9.value = f.n1.value;
+		f.n10.value = f.n2.value;
+		f.n11.value = f.n3.value;
+		f.n12.value = f.n4.value;
+		f.n13.value = f.n5.value;
+		f.n14.value = f.n6.value;
+		f.n15.value = f.n7.value;
+		f.n16.value = f.n8.value;
 
-		}
 	}
 </script>
 <script type="text/javascript">
@@ -196,9 +216,10 @@ input[type=checkbox]:checked+label>span>span {
 							<div class="clearfix"></div>
 						</div>
 						<br>
-
-						<button id="activate-step-2" class="btn btn-primary btn-md"
-							onclick="topFunction()">Shipping Address</button>
+						<div align="center">
+							<button id="activate-step-2" class="btn btn-primary btn-md"
+								onclick="topFunction()">Shipping Address</button>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -267,12 +288,16 @@ input[type=checkbox]:checked+label>span>span {
 						<form:input path="shippingAddress.zipcode" id="n8" />
 						<div class="clearfix"></div>
 					</div>
-					<br> <input type="checkbox" name="billingtoo"
-						onclick="FillBilling(this.form)"> <em>Check this box
-						if Shipping Address and Billing Address are the same.</em> <br> <br>
+
 					<br>
-					<button id="activate-step-3" class="btn btn-primary btn-md"
-						onclick="topFunction()">Billing Address</button>
+					<div align="center">
+						<input type="button" name="billingtoo"
+							class="billingequalsshipping" onclick="FillBilling(this.form)"
+							Value="Billing Address same as Shipping Address?"> <br>
+						<br> <br>
+						<button id="activate-step-3" class="btn btn-primary btn-md"
+							onclick="topFunction()">Billing Address</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -284,6 +309,14 @@ input[type=checkbox]:checked+label>span>span {
 				<div class="form-w3agile form1">
 					<!--billing address -->
 					<h3>Billing Address</h3>
+					
+							
+					<div align="center">
+						<input type="button" name="billingtoo"
+							class="billingequalsshipping" onclick="FillBilling(this.form)"
+							Value="Billing Address same as Shipping Address?"> <br>
+						<br> <br></div>
+					
 					<form:label path="billingAddress.flatno">Flat No</form:label>
 					<div class="key">
 						<i class="glyphicon glyphicon-home" aria-hidden="true"></i>
@@ -340,17 +373,17 @@ input[type=checkbox]:checked+label>span>span {
 						<form:input path="billingAddress.zipcode" id="n16" />
 						<div class="clearfix"></div>
 					</div>
-					<br> <input type="submit" value="Submit">
-
+					<br>
+					<div align="center">
+						<input type="submit" value="Submit">
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
 	</form:form>
-
-
-	<script>
+						<script>
 		function topFunction() {
 			document.body.scrollTop = 0;
 			document.documentElement.scrollTop = 0;
@@ -433,7 +466,6 @@ input[type=checkbox]:checked+label>span>span {
 											})
 						});
 	</script>
-
 	<br>
 	<br>
 	<%@include file="shared/Footer.jsp"%>

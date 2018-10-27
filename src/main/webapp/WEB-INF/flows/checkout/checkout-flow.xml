@@ -29,6 +29,7 @@
 	</view-state>
 
 	<action-state id="processOrder">
+<!-- 		<evaluate expression="customerOrderDAOImpl.saveCustomerOrderPlaced(order.customerorderplaced)" /> -->
 		<evaluate expression="cartItemDAOImpl.removeAllCartItems(order.cart)" />
 		<transition to="thankCustomer" />
 	</action-state>

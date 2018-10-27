@@ -62,7 +62,8 @@
 
 							<li><a>Welcome:
 									${pageContext.request.userPrincipal.name}</a></li>
-							<li><a href="<c:url value='/MyAccount/getUserDetails'/>">My Account</a>
+							<li><a href="<c:url value='/MyAccount/getUserDetails'/>">My Account</a></li>
+							<li><a href="<c:url value='/Myorders'/>">My Orders</a></li>
 							<li><a href="<c:url value='/Logout'/>">Logout</a></li>
 							
 
@@ -113,30 +114,6 @@
 
 
 
-									<!-- 									Mega Menu -->
-									<%-- 									<li class="dropdown"><a href="<c:url value='/Products'/>" --%>
-									<!-- 										class="dropdown-toggle" data-toggle="dropdown">Products<b -->
-									<!-- 											class="caret"></b></a> -->
-									<!-- 										<ul class="dropdown-menu multi-column columns-3"> -->
-									<!-- 											<div class="row"> -->
-									<!-- 												<div class="col-sm-3  multi-gd-img"> -->
-									<!-- 													<ul class="multi-column-dropdown"> -->
-									<!-- 														<h6>Categories</h6> -->
-									<%-- 														<li><a href="<c:url value='/Products'/>">Phones</a></li> --%>
-									<%-- 														<li><a href="<c:url value='/Products'/>">Cases</a></li> --%>
-									<%-- 														<li><a href="<c:url value='/Products'/>">Skins</a></li> --%>
-									<%-- 														<li><a href="<c:url value='/Products'/>">Bumpers</a></li> --%>
-									<%-- 														<li><a href="<c:url value='/Products'/>">Tempered --%>
-									<!-- 																Glasses</a></li> -->
-									<%-- 														<li><a href="<c:url value='/Products'/>">Accessories</a></li> --%>
-									<!-- 													</ul> -->
-									<!-- 												</div> -->
-
-
-									<!-- 												<div class="clearfix"></div> -->
-									<!-- 											</div> -->
-									<!-- 										</ul></li> -->
-
 									<c:if test="${pageContext.request.userPrincipal.name != null }">
 
 										<security:authorize access="hasRole('ROLE_ADMIN')">
@@ -155,6 +132,7 @@
 																<li><a href="<c:url value='/listsupplier'/>">Supplier</a></li>
 																<li><a href="<c:url value='/listuser'/>">User</a></li>
 																<li><a href="<c:url value='/listcategory'/>">Category</a></li>
+																<li><a href="<c:url value='/Allorders'/>"> Orders</a>
 															</ul>
 														</div>
 
@@ -201,21 +179,17 @@
 						</div>
 						</div>
 					</div>
-
-
-
-
-					<!-- 					<div class="logo-nav-right"> -->
-					<!-- 						<ul class="cd-header-buttons"> -->
-					<!-- 							<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li> -->
-					<!-- 						</ul> -->
-					<!-- 						cd-header-buttons -->
-					<!-- 						<div id="cd-search" class="cd-search"> -->
-					<%-- 							<form action="#" method="post"> --%>
-					<!-- 								<input name="Search" type="search" placeholder="Search..."> -->
-					<%-- 							</form> --%>
-					<!-- 						</div> -->
-					<!-- 					</div> -->
+<!-- 										<div class="logo-nav-right"> -->
+<!-- 											<ul class="cd-header-buttons"> -->
+<!-- 												<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li> -->
+<!-- 											</ul> -->
+										
+<!-- 											<div id="cd-search" class="cd-search"> -->
+<%-- 												<form action="#" method="post"> --%>
+<!-- 													<input name="Search" type="search" placeholder="Search..."> -->
+<%-- 												</form> --%>
+<!-- 											</div> -->
+<!-- 										</div> -->
 </header>
 <script src="${js}/angular.min.js">
 	

@@ -44,9 +44,7 @@ public class SupplierController {
 
 	@RequestMapping(value = "/listsupplier")
 	public String ViewSupplier(Model model) {
-		System.out.println("before");
 		model.addAttribute("supplierList", this.sdao.listSupplier());
-		System.out.println("after");
 		return "/listsupplier";
 	}
 

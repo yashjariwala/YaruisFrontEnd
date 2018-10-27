@@ -13,7 +13,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Yaruis Cart</title>
+<title>Cart</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 </head>
 <style type="text/css">
@@ -121,7 +121,8 @@ input[type=text] {
 
 
 								<a href="${url}" class="btn btn-default"> Continue shopping</a>
-							</div>
+							</div><br>
+							
 							<div>
 								<a class="btn btn-danger pull-left" ng-click="clearCart()">
 									<span class="glyphicon glyphicon-remove-sign"> </span> Clear

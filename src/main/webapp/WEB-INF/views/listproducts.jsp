@@ -15,7 +15,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Yaruis Products list</title>
+<title>Products List</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 </head>
 <style type="text/css">
@@ -78,49 +78,6 @@ input[type=text] {
 	background-color: #f9f9f9
 }
 
-.sidenav {
-	height: 78%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 50;
-	left: 0;
-	background-color: #ffffff;
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 60px;
-}
-
-.sidenav a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 60px;
-	color: #818181;
-	display: block;
-	transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus {
-	color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-	.sidenav {
-		padding-top: 15px;
-	}
-	.sidenav a {
-		font-size: 20px;
-	}
-}
-
 .inside {
 	padding: 1.6em;
 }
@@ -128,130 +85,58 @@ input[type=text] {
 input[type=radio] {
 	display: none;
 }
-
-input[type=radio]+label {
-	width: 170px;
-	display: inline-block;
-	margin: -2px;
-	padding: 4px 12px;
-	margin-bottom: 0;
-	font-size: 14px;
-	line-height: 20px;
-	color: #333;
-	text-align: center;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	vertical-align: middle;
+</style>
+<style>
+.dropbtn {
+	background-color: #2d70c2;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
 	cursor: pointer;
-	background-color: #f5f5f5;
-	background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff),
-		to(#e6e6e6));
-	background-image: -webkit-linear-gradient(top, #fff, #e6e6e6);
-	background-image: -o-linear-gradient(top, #fff, #e6e6e6);
-	background-image: linear-gradient(to bottom, #fff, #e6e6e6);
-	background-repeat: repeat-x;
-	border: 1px solid #ccc;
-	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	border-bottom-color: #b3b3b3;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',
-		endColorstr='#ffe6e6e6', GradientType=0);
-	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
-		rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
-		rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px
-		rgba(0, 0, 0, 0.05);
 }
 
-input[type=radio]:checked+label {
-	background-image: none;
-	outline: 0;
-	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px
-		rgba(0, 0, 0, 0.05);
-	-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px
-		rgba(0, 0, 0, 0.05);
-	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px
-		rgba(0, 0, 0, 0.05);
-	background-color: #e0e0e0;
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	right: 0;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.multi-column-dropdown {
+	align: center; 
+	color : black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	color: black;
+}
+
+.multi-column-dropdown:hover {
+	background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #2d70c2;
 }
 </style>
-<script>
-	window.onscroll = function() {
-		if ($(this).width() > 960) {
-			scrollFunction()
-		}
-	};
 
-	function scrollFunction() {
-		if (document.body.scrollTop > 2
-				|| document.documentElement.scrollTop > 2) {
-			document.getElementById("mySidenav").style.width = "250px";
-		} else {
-			document.getElementById("mySidenav").style.width = "0";
-		}
-	}
-</script>
 <%@include file="shared/Header.jsp"%>
 <body ng-app="prodapp" ng-controller="myprodController"
 	ng-init="listProduct()">
 
-
-	<div id="mySidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-		<div class="inside">
-			<h1>Categories</h1>
-			<br>
-
-			<h4>
-				<input type="radio" id="all" name="all"
-					ng-model="searchConditionprod"> <label for="all">All</label>
-			</h4>
-			<br>
-			<h4>
-				<input type="radio" id="sp" name="Smartphones"
-					ng-model="searchConditionprod" value="Smart Phones"> <label
-					for="sp">Smart Phones</label>
-			</h4>
-			<br>
-			<h4>
-				<input type="radio" id="acc" name="Accessories"
-					ng-model="searchConditionprod" value="Accessories"> <label
-					for="acc">Accessories</label>
-			</h4>
-			<br>
-			<h4>
-				<input type="radio" id="cov" name="Covers"
-					ng-model="searchConditionprod" value="Covers"> <label
-					for="cov">Covers</label>
-			</h4>
-			<br>
-			<h4>
-				<input type="radio" id="Sg" name="Screen Guards"
-					ng-model="searchConditionprod" value="Screen Guards"> <label
-					for="Sg">Screen Guards</label>
-			</h4>
-			<br>
-			<h1>Sort By</h1>
-
-			<br>
-			<h4>
-				<input type="radio" id="pn" name="productname"
-					ng-model="orderbycatg" value="productname"> <label for="pn">Alphabetically</label>
-			</h4>
-
-			<br>
-			<h4>
-				<input type="radio" id="pp" name="productprice"
-					ng-model="orderbycatg" value="productprice"> <label
-					for="pp">Price</label>
-			</h4>
-			<br>
-
-		</div>
-	</div>
 	<div>
 		<br>
 		<div align="center">
@@ -269,10 +154,52 @@ input[type=radio]:checked+label {
 			<div class="login">
 				<div class="main-wide-agileits">
 					<div class="form-w3agile">
+
+
+
 						<h3>Product List</h3>
+
+						<div class="dropdown" style="float: left;">
+							<button class="dropbtn">Categories &nbsp;<i class = "glyphicon glyphicon-chevron-down"></i></button>
+							<div class="dropdown-content" style="left: 0;">
+
+								<ul class="multi-column-dropdown">
+									<li><input type="radio" id="all" name="all"
+										ng-model="searchConditionprod"> <label for="all">All</label>
+									</li>
+									<li><input type="radio" id="sp" name="Smartphones"
+										ng-model="searchConditionprod" value="Smart Phones"> <label
+										for="sp">Smart Phones</label></li>
+
+									<li><input type="radio" id="acc" name="Accessories"
+										ng-model="searchConditionprod" value="Accessories"> <label
+										for="acc">Accessories</label></li>
+									<li><input type="radio" id="cov" name="Covers"
+										ng-model="searchConditionprod" value="Covers"> <label
+										for="cov">Covers/Skins</label></li>
+									<li><input type="radio" id="Sg" name="Screen Guards"
+										ng-model="searchConditionprod" value="Screen Guards">
+										<label for="Sg">Screen Guards</label></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="dropdown" style="float: right;">
+							<button class="dropbtn">Sort By&nbsp;<i class = "glyphicon glyphicon-chevron-down"></i></button>
+							<div class="dropdown-content">
+								<ul class="multi-column-dropdown">
+									<li><input type="radio" id="pn" name="productname"
+										ng-model="orderbycatg" value="productname"> <label
+										for="pn">Alphabetically</label></li>
+									<li><input type="radio" id="pp" name="productprice"
+										ng-model="orderbycatg" value="productprice"> <label
+										for="pp">Price</label></li>
+								</ul>
+							</div>
+						</div>
+<br><br><br><br>
+
 						<div class="table-responsive">
-							<span style="font-size: 30px; cursor: pointer"
-								onclick="openNav()">&#9776; Sort Products</span>
 							<table class="tg">
 								<tr>
 									<security:authorize access="hasRole('ROLE_ADMIN')">
@@ -304,12 +231,13 @@ input[type=radio]:checked+label {
 									<security:authorize access="hasRole('ROLE_ADMIN')">
 										<td>{{p.suppliername}}</td>
 									</security:authorize>
-									<td>{{p.productprice}}</td>
+									<td>{{p.productprice}}/-</td>
 									<c:url value="/resources/images/{{p.productname}}.jpg"
 										var="imgg" />
 
 									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>">
-										<img src="${imgg}" alt="prodimage" height="80" width="80" /></a></td>
+											<img src="${imgg}" alt="prodimage" height="80" width="80" />
+									</a></td>
 									<td><a href="<c:url value='/infoprod/{{p.productid}}'/>"><span
 											class="glyphicon glyphicon-info-sign"></span></a></td>
 									<security:authorize access="hasRole('ROLE_ADMIN')">
@@ -320,7 +248,6 @@ input[type=radio]:checked+label {
 								</tr>
 								<%-- 							</c:forEach> --%>
 							</table>
-
 						</div>
 					</div>
 				</div>

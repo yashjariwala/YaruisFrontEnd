@@ -68,12 +68,12 @@
 		<security:intercept-url pattern="/listuser/**"
 			access="hasAnyRole('ROLE_ADMIN')" />
 
-		<security:intercept-url pattern="/removeuser/**"
-			access="hasAnyRole('ROLE_ADMIN')" />
+		<!-- <security:intercept-url pattern="/removeuser/**" -->
+		<!-- access="hasAnyRole('ROLE_ADMIN')" /> -->
 
 		<security:intercept-url pattern="/edituser/**"
 			access="hasAnyRole('ROLE_ADMIN')" />
-	
+
 		<!-- Order Security -->
 		<security:intercept-url pattern="/order/{cartId}/**"
 			access="hasAnyRole('ROLE_USER')" />
@@ -81,7 +81,7 @@
 		<security:intercept-url pattern="/checkout**"
 			access="hasAnyRole('ROLE_USER')" />
 
-	<!-- My Account -->
+		<!-- My Account -->
 		<security:intercept-url pattern="/MyAccount/**"
 			access="hasAnyRole('ROLE_USER','ROLE_ADMIN')" />
 
@@ -89,6 +89,14 @@
 		<!-- Cart Security -->
 		<security:intercept-url pattern="/cart/**"
 			access="hasAnyRole('ROLE_USER')" />
+
+		<!-- My Orders Security -->
+		<security:intercept-url pattern="/Myorders/**"
+			access="hasAnyRole('ROLE_USER')" />
+
+		<!-- All Orders Security -->
+		<security:intercept-url pattern="/Allorders/**"
+			access="hasAnyRole('ROLE_ADMIN')" />
 
 		<security:form-login authentication-failure-url="/loginerror"
 			login-processing-url="/j_spring_security-check" password-parameter="j_User_password"

@@ -2365,7 +2365,7 @@ p.quote {
 }
 
 
-.key  input[type="text"], .key  input[type="password"] {
+.key  input[type="text"], .key  input[type="password"], .key  input[type="email"] {
 	width: 75%;
 	padding: 10px 10px;
 	font-size: 1em;
