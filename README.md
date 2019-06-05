@@ -27,8 +27,8 @@ Mail is also sent once an user is registered.
 - Modern Web Browser (Used: Chrome)
 
 ## GitHub Links 
-- EcommerceFrontEnd <https://github.com/yashjariwala/YaruisFrontEnd>
-- EcommerceBackEnd <https://github.com/yashjariwala/YaruisBackEnd>
+- EcommerceFrontEnd <https://github.com/yashjariwala/YarishFrontEnd>
+- EcommerceBackEnd <https://github.com/yashjariwala/YarishBackEnd>
 
 ## Technologies used 
 - Spring framework

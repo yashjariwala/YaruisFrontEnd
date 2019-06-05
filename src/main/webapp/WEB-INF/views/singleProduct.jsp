@@ -10,7 +10,7 @@
 <spring:url value="/resources/images" var="img" />
 <spring:url value="/resources/fonts" var="fonts" />
 <html>
-<title>Yaruis Product</title>
+<title>Yarish Product</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 
 <style>

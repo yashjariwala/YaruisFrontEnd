@@ -3,7 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-	<var name="order" class="com.yaruis.ecommercebackend.model.CustomerOrder" />
+	<var name="order" class="com.Yarish.ecommercebackend.model.CustomerOrder" />
 
 	<action-state id="addCartToOrder">
 		<evaluate expression="cartDAOImpl.validate(requestParameters.cartId)"
@@ -29,7 +29,7 @@
 	</view-state>
 
 	<action-state id="processOrder">
-		<evaluate expression="customerOrderDAOImpl.saveCustomerOrderPlaced(order.customerorderplaced)" />
+<!-- 		<evaluate expression="customerOrderDAOImpl.saveCustomerOrderPlaced(order.customerorderplaced)" /> -->
 		<evaluate expression="cartItemDAOImpl.removeAllCartItems(order.cart)" />
 		<transition to="thankCustomer" />
 	</action-state>

@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="copy-left">
 				<p>
-					&copy; 2016-2018 Yaruis. All rights reserved | Design by <a
+					&copy; 2016-2019 Yarish. All rights reserved | Design by <a
 						href="https://www.facebook.com/yashjariwala96">YashJariwala@NIIT</a>
 				</p>
 			</div>
@@ -32,7 +32,7 @@
 							<div class="footer-grids">
 								<div class="col-md-3 footer-grid">
 									<h4>About </h4>
-									<p>Yaruis is a one stop destination for all mobile and tablet related needs.We provide only the best of the products and also provide guaranteed returns if you dont like stuff! </p>
+									<p>Yarish is a one stop destination for all mobile and tablet related needs.We provide only the best of the products and also provide guaranteed returns if you dont like stuff! </p>
 									<div class="social-icon">
 										<a href="https://www.facebook.com/yashjariwala96"><i class="icon"></i></a>
 										<a href="https://twitter.com/yashjariwala123"><i class="icon1"></i></a>
@@ -78,7 +78,7 @@
 									<ul>
 										<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i><a href="<c:url value='/ContactUs'/>"> Gokhale Road,Thane India</a></li>
 										<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i><a href="<c:url value='/ContactUs'/>">1800 100 200</a></li>
-										<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:yaruisshopanywhere@gmail.com"> yaruisshopanywhere@gmail.com</a></li>
+										<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:Yarishshopanywhere@gmail.com"> Yarishshopanywhere@gmail.com</a></li>
 										
 									</ul>
 								</div>

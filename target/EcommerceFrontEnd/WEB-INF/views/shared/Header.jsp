@@ -12,7 +12,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Yaruis Home</title>
+<title>Yarish Home</title>
 <!--css-->
 <link href="${css}/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
@@ -49,7 +49,8 @@
 			<div class="container">
 				<div class="top-left">
 					<a href="<c:url value='/ContactUs'/>">Contact Us <i
-						class="glyphicon glyphicon-phone" aria-hidden="true"></i> 1800 100 200
+						class="glyphicon glyphicon-phone" aria-hidden="true"></i> 1800 100
+						200
 					</a>
 				</div>
 				<div class="top-right">
@@ -62,10 +63,11 @@
 
 							<li><a>Welcome:
 									${pageContext.request.userPrincipal.name}</a></li>
-							<li><a href="<c:url value='/MyAccount/getUserDetails'/>">My Account</a></li>
-							<li><a href="<c:url value='/Myorders'/>">My Orders</a></li>
+							<li><a href="<c:url value='/MyAccount/getUserDetails'/>">My
+									Account</a></li>
+<%-- 							<li><a href="<c:url value='/Myorders'/>">My Orders</a></li> --%>
 							<li><a href="<c:url value='/Logout'/>">Logout</a></li>
-							
+
 
 						</c:if>
 
@@ -88,7 +90,7 @@
 				<div class="logo-nav">
 					<div class="logo-nav-left">
 						<h1>
-							<a href="<c:url value='/Home'/>">Yaruis <span>Shop
+							<a href="<c:url value='/Home'/>">Yarish <span>Shop
 									anywhere</span></a>
 						</h1>
 					</div>
@@ -118,7 +120,7 @@
 
 										<security:authorize access="hasRole('ROLE_ADMIN')">
 
-
+<%-- 											<li><a href="<c:url value='/UpdateImages'/>">Update Images</a></li> --%>
 											<!-- Mega Menu -->
 											<li class="dropdown"><a
 												href="<c:url value='/Products'/>" class="dropdown-toggle"
@@ -132,7 +134,8 @@
 																<li><a href="<c:url value='/listsupplier'/>">Supplier</a></li>
 																<li><a href="<c:url value='/listuser'/>">User</a></li>
 																<li><a href="<c:url value='/listcategory'/>">Category</a></li>
-																<li><a href="<c:url value='/Allorders'/>"> Orders</a>
+																<li><a href="<c:url value='/Allorders'/>">
+																		Orders</a>
 															</ul>
 														</div>
 
@@ -171,25 +174,24 @@
 
 					<div class="header-right2">
 						<div class="cart box_1">
-						<a>
-							<a href="<c:url value='/cart/getCartId'/>"> Cart <img
-								src="${img}/bag.png" alt="" allign="center" />
+							<a> <a href="<c:url value='/cart/getCartId'/>"> Cart <img
+									src="${img}/bag.png" alt="" allign="center" />
 							</a>
-						</a>
-						</div>
+							</a>
 						</div>
 					</div>
-<!-- 										<div class="logo-nav-right"> -->
-<!-- 											<ul class="cd-header-buttons"> -->
-<!-- 												<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li> -->
-<!-- 											</ul> -->
-										
-<!-- 											<div id="cd-search" class="cd-search"> -->
-<%-- 												<form action="#" method="post"> --%>
-<!-- 													<input name="Search" type="search" placeholder="Search..."> -->
-<%-- 												</form> --%>
-<!-- 											</div> -->
-<!-- 										</div> -->
+				</div>
+				<!-- 										<div class="logo-nav-right"> -->
+				<!-- 											<ul class="cd-header-buttons"> -->
+				<!-- 												<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li> -->
+				<!-- 											</ul> -->
+
+				<!-- 											<div id="cd-search" class="cd-search"> -->
+				<%-- 												<form action="#" method="post"> --%>
+				<!-- 													<input name="Search" type="search" placeholder="Search..."> -->
+				<%-- 												</form> --%>
+				<!-- 											</div> -->
+				<!-- 										</div> -->
 </header>
 <script src="${js}/angular.min.js">
 	

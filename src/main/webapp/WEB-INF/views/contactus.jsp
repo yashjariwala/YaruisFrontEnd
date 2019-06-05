@@ -55,8 +55,8 @@
 							<i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
 							<h5>E-mail</h5>
 							<p>
-								E-mail:<a href="mailto:yaruisshopanywhere@gmail.com">
-									yaruisshopanywhere@gmail.com</a>
+								E-mail:<a href="mailto:Yarishshopanywhere@gmail.com">
+									Yarishshopanywhere@gmail.com</a>
 							</p>
 						</div>
 						<div class="clearfix"></div>

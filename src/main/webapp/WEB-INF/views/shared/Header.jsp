@@ -12,7 +12,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Yaruis Home</title>
+<title>Yarish Home</title>
 <!--css-->
 <link href="${css}/bootstrap.css" rel="stylesheet" type="text/css"
 	media="all" />
@@ -90,7 +90,7 @@
 				<div class="logo-nav">
 					<div class="logo-nav-left">
 						<h1>
-							<a href="<c:url value='/Home'/>">Yaruis <span>Shop
+							<a href="<c:url value='/Home'/>">Yarish <span>Shop
 									anywhere</span></a>
 						</h1>
 					</div>

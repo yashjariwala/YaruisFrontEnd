@@ -49,12 +49,12 @@ body {
 		<div class="login">
 			<div class="main-agileits">
 				<div class="form-w3agile">
-					<h3>About Yaruis</h3>
+					<h3>About Yarish</h3>
 					<form>
 						<h1>Hello Everyone!</h1>
 						<br>
 						<h4>
-							We at <b> Yaruis</b> welcome you to the ultimate shopping
+							We at <b> Yarish</b> welcome you to the ultimate shopping
 							experince on the planet! It has the best products and the
 							categories are so well sorted so that you can get to the product
 							you want as quick as you want saving you time which can be spent

@@ -48,7 +48,7 @@
 			<div class="row">
 				<div class="col-twelve">
 
-					<a href="<c:url value='/Home'/>"><h2>Yaruis</h2> </a>
+					<a href="<c:url value='/Home'/>"><h2>Yarish</h2> </a>
 
 					<h1 class="kern-this">403 Error.</h1>
 					<p>${msg} Maybe try on of the links below or just enjoy effects!</p>
@@ -69,7 +69,7 @@
 					<ul class="links">
 						<li><a href="<c:url value='/Home'/>">Home</a></li>
 						<li><a href="<c:url value='/AboutUs'/>">About</a></li>
-						<li><a href="mailto:yaruisshopanywhere@gmail.com">Report
+						<li><a href="mailto:Yarishshopanywhere@gmail.com">Report
 								Error</a></li>
 					</ul>
 

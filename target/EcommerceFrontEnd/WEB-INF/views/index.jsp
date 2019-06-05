@@ -13,10 +13,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Yaruis Home</title>
+<title>Yarish Home</title>
 <link rel="shortcut icon" href="${img}/y.png" />
 <style>
-.yaruish1 {
+.Yarishh1 {
 	color: #1565C0;
 	font-size: 2.5em;
 	text-align: center;
@@ -80,7 +80,7 @@
 		<!--banner-bottom-->
 		<div class="ban-bottom-w3l">
 			<div class="container">
-				<div class="yaruish1">
+				<div class="Yarishh1">
 					<h1>Products we offer</h1>
 				</div>
 				<div class="col-md-6 ban-bottom">
@@ -130,7 +130,6 @@
 			</div>
 		</div>
 	</div>
-
 	<footer>
 		<%@include file="shared/Footer.jsp"%>
 	</footer>

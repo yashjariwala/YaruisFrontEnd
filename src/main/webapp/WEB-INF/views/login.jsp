@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Yaruis Login</title>
+<title>Yarish Login</title>
 <link rel="shortcut icon" href="${img}/login.png" />
 <meta charset="utf-8">
 <meta name="viewport"
@@ -88,7 +88,7 @@ input[type=checkbox]:checked+label>span>span {
 		<div class="login">
 			<div class="main-agileits">
 				<div class="form-w3agile">
-					<h3>Login To Yaruis</h3>
+					<h3>Login To Yarish</h3>
 					<c:if test="${not empty error}">
 						<div class=error style="color: #ff0000">${error}</div>
 					</c:if>
