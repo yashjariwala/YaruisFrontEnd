@@ -41,13 +41,13 @@ public class ProductaddController {
 	}
 
 	@RequestMapping(value = "/addproduct", method = RequestMethod.POST)
-	public String addprod(@Valid @ModelAttribute("Proddata") Product reg, HttpServletRequest request,BindingResult result) {
-	
+	public String addprod(@Valid @ModelAttribute("Proddata") Product reg, HttpServletRequest request,
+			BindingResult result) {
+
 		MultipartFile image = reg.getImage();
 		if (image != null && !image.isEmpty()) {
-			Path path = Paths
-					.get("C:\\Users\\yashj\\Eclipse Workspace\\YarishFrontEnd\\src\\main\\webapp\\resources\\images\\"
-							+ reg.getProductname() + ".jpg");
+			Path path = Paths.get("C:\\Users\\yashj\\WebSite\\YarishFrontEnd\\src\\main\\webapp\\resources\\images\\"
+					+ reg.getProductname() + ".jpg");
 			try {
 				image.transferTo(new File(path.toString()));
 			} catch (IllegalStateException e) {
@@ -71,8 +71,28 @@ public class ProductaddController {
 	}
 
 	@RequestMapping(value = "/removeprod/{productid}")
-	public String DeleteProducts(@PathVariable("productid") int id) {
-		this.pdao.delete(id);
+	public String DeleteProducts(@PathVariable("productid") int id, Product proString) {
+		proString = pdao.get(id);
+		System.out.println(proString);
+		String todelprodname = proString.getProductname();
+		System.out.println(todelprodname);
+		try {
+
+			File file = new File("C:\\Users\\yashj\\WebSite\\YarishFrontEnd\\src\\main\\webapp\\resources\\images\\" + todelprodname+".jpg");
+
+			if (file.delete()) {
+				System.out.println(file.getName() + " is deleted!");
+				this.pdao.delete(id);
+			} else {
+				System.out.println("Delete operation is failed.");
+				return "redirect:/listproduct";
+			}
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		}
 		return "redirect:/listproduct";
 
 	}
@@ -89,11 +109,10 @@ public class ProductaddController {
 		return pdao.list();
 	}
 
-
 	@RequestMapping("/infoprod/{productid}")
 	public ModelAndView getRecord(@PathVariable("productid") int id, Model model) {
 		Product productObject = pdao.get(id);
 		return new ModelAndView("singleProduct", "productObject", productObject);
 	}
-	
+
 }
