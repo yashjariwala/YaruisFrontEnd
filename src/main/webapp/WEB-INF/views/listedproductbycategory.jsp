@@ -134,8 +134,8 @@ input[type=radio] {
 </style>
 
 <%@include file="shared/Header.jsp"%>
-<body ng-app="prodapp" ng-controller="myprodController"
-	ng-init="listProduct()">
+<body ng-app="prodbycatapp" ng-controller="myprodbycatController"
+	ng-init="listProductByCatag()">
 
 	<div>
 		<br>
@@ -157,47 +157,11 @@ input[type=radio] {
 
 
 
-						<h3>Product List</h3>
+						<h3>Products List</h3>
+						
 
-						<div class="dropdown" style="float: left;">
-							<button class="dropbtn">Categories &nbsp;<i class = "glyphicon glyphicon-chevron-down"></i></button>
-							<div class="dropdown-content" style="left: 0;">
 
-								<ul class="multi-column-dropdown">
-									<li><input type="radio" id="all" name="all"
-										ng-model="searchConditionprod"> <label for="all">All</label>
-									</li>
-									<li><input type="radio" id="sp" name="Smartphones"
-										ng-model="searchConditionprod" value="Smart Phones"> <label
-										for="sp">Smart Phones</label></li>
-
-									<li><input type="radio" id="acc" name="Accessories"
-										ng-model="searchConditionprod" value="Accessories"> <label
-										for="acc">Accessories</label></li>
-									<li><input type="radio" id="cov" name="Covers"
-										ng-model="searchConditionprod" value="Covers"> <label
-										for="cov">Covers/Skins</label></li>
-									<li><input type="radio" id="Sg" name="Screen Guards"
-										ng-model="searchConditionprod" value="Screen Guards">
-										<label for="Sg">Screen Guards</label></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="dropdown" style="float: right;">
-							<button class="dropbtn">Sort By&nbsp;<i class = "glyphicon glyphicon-chevron-down"></i></button>
-							<div class="dropdown-content">
-								<ul class="multi-column-dropdown">
-									<li><input type="radio" id="pn" name="productname"
-										ng-model="orderbycatg" value="productname"> <label
-										for="pn">Alphabetically</label></li>
-									<li><input type="radio" id="pp" name="productprice"
-										ng-model="orderbycatg" value="productprice"> <label
-										for="pp">Price</label></li>
-								</ul>
-							</div>
-						</div>
-<br><br><br><br>
+					
 
 						<div class="table-responsive">
 							<table class="tg">

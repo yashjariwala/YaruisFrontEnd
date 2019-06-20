@@ -69,6 +69,12 @@ public class ProductaddController {
 		model.addAttribute("productList", this.pdao.list());
 		return "/listproducts";
 	}
+	
+	@RequestMapping(value = "/listproduct/{nameofcatgtobesorted}")
+	public String ViewProductsByCategory(Model model,@PathVariable("nameofcatgtobesorted") String nameofcatg) {
+		model.addAttribute("productListbycategory", this.pdao.listprodbycategory(nameofcatg));
+		return "/listedproductbycategory";
+	}
 
 	@RequestMapping(value = "/removeprod/{productid}")
 	public String DeleteProducts(@PathVariable("productid") int id, Product proString) {
@@ -108,7 +114,12 @@ public class ProductaddController {
 	public @ResponseBody List<Product> listProdInJSON() {
 		return pdao.list();
 	}
-
+	
+	@RequestMapping("/listproductsjson/{nameofcatgtobesorted}")
+	public @ResponseBody List<Product> listjsonproductsbycategoryInJSON (@PathVariable("nameofcatgtobesorted") String nameofcatgtobesorted, Model model) {
+		return pdao.listprodbycategory(nameofcatgtobesorted);
+	}
+	
 	@RequestMapping("/infoprod/{productid}")
 	public ModelAndView getRecord(@PathVariable("productid") int id, Model model) {
 		Product productObject = pdao.get(id);

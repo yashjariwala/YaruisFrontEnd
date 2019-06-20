@@ -2,7 +2,7 @@
 
 This is an E-commerce project which is divided in two parts FrontEnd and BackEnd.
 
-It has role based access mechanism I.E ROLE_USER and ROLE_ADMIN
+It has role based access mechanism i.e ROLE_USER and ROLE_ADMIN
 
 ROLE_USER is the user login and can do the basic shopping part 
 
@@ -53,8 +53,8 @@ Mail is also sent once an user is registered.
 ## Configuration
 
 - Import both the projects
-	EcommerceFrontEnd
-	EcommerceBackEnd
+	YarishFrontEnd
+	yarishBackEnd
 
 - For both the projects Run 
 	Maven Clean	
@@ -79,22 +79,15 @@ And Update both maven projects.
 
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 06-03-2018
+## Changelog as of 20-06-2019
 
-- Forgot password has been successfully implemented a mail with reset link is sent which lets change the password.
+- Url created base on the Category for better sorting and performance of products list.
 
-- Forgot User name has been successfully implemented mail with user name is sent.
+- Images are deleted as the product gets deleted previously it used to just collect images.
 
-- Many under the hood Improvements.
-
-- Email was completely revamped from plain text based email to bootstrap based email template.
-
-- Delete User was added to the my accounts page.
-
-- Recommended Products does not show Recommended Products Table if no products are found in same category on the products page.
-
-- Solved Bootstrap related design problems in header and some pages.
-
+- Change of project name from Yaruis to Yarish.
+ 
+- Under the hood improvements.
 
 ## Upcoming Ideas! (Not surely coming!)
 
