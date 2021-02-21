@@ -254,15 +254,7 @@ input[type=radio] {
 			</div>
 		</div>
 	</div>
-	<script>
-		function openNav() {
-			document.getElementById("mySidenav").style.width = "250px";
-		}
 
-		function closeNav() {
-			document.getElementById("mySidenav").style.width = "0";
-		}
-	</script>
 	<%@include file="shared/Footer.jsp"%>
 	<script src="${js}/app.js"></script>
 </body>

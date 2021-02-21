@@ -86,7 +86,7 @@
 				<div class="col-md-6 ban-bottom">
 					<div class="ban-top">
 				
-					<a href="<c:url value="/listproduct"></c:url>">	
+					<a href="<c:url value="/listproduct/Smart Phones"></c:url>">	
 						<img src="${img}/mobile.jpg" class="img-responsive" alt=""> 
 						<div class="ban-text">
 							<h4>Mobile Phone's</h4>
@@ -98,7 +98,7 @@
 				</div>
 				<div class="col-md-6 ban-bottom3">
 					<div class="ban-top">
-					<a href="<c:url value="/listproduct"></c:url>">	
+					<a href="<c:url value="/listproduct/Covers & Skins"></c:url>">	
 						<img src="${img}/cases.jpg" class="img-responsive" alt="" />
 						<div class="ban-text1">
 							<h4>Mobile Cases</h4>
@@ -107,16 +107,16 @@
 					<div class="ban-img">
 						<div class=" ban-bottom1">
 							<div class="ban-top">
-							<a href="<c:url value="/listproduct"></c:url>">	
+							<a href="<c:url value="/listproduct/Accessories"></c:url>">	
 								<img src="${img}/acc.jpg" class="img-responsive" alt="" />
 								<div class="ban-text1">
-									<h4>Accessiories</h4>
+									<h4>Accessories</h4>
 								</div></a>
 							</div>
 						</div>
 						<div class="ban-bottom2">
 							<div class="ban-top">
-							<a href="<c:url value="/listproduct"></c:url>">	
+							<a href="<c:url value="/listproduct/Screen Guards"></c:url>">	
 								<img src="${img}/tempered.jpg" class="img-responsive" alt="" />
 								<div class="ban-text1">
 									<h4>Screen Protection</h4>

@@ -59,7 +59,7 @@ var app = angular.module("prodapp", []).controller(
 		'myprodController',
 		function($scope, $http) {
 			$scope.listProduct = function() {
-				$http.get('/EcommerceFrontEnd/listproductsjson').success(
+				$http.get('/EcommerceFrontEnd/listproductsjson/').success(
 						function(data) {
 
 							$scope.products = data;
@@ -69,3 +69,19 @@ var app = angular.module("prodapp", []).controller(
 			}
 
 		})
+		
+var app = angular.module("prodbycatapp", []).controller(
+		'myprodbycatController',
+		function($scope, $http) {
+			$scope.listProductByCatag = function() {
+			var path = window.location.pathname.split('/');
+			console.log(path);
+			$http.get('/EcommerceFrontEnd/listproductsjson/' + path[3]).success(
+					function(data) {
+
+						$scope.products = data;
+						console.log(data);
+					})
+			}
+		})
+
