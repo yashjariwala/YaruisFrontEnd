@@ -63,6 +63,8 @@ And Update both maven projects.
 
 - Set properties
 
+- Properties--> web deployment assembly-->add java build path entries --> Maven
+
 - To set Roles and register users, in UserDAOImpl in save method 
 	To register user as admin update the following line as follows:"user.setUserrole("ROLE_ADMIN")"
 	To register user as a customer update the following line as follows:"user.setUserrole("ROLE_USER")"
@@ -77,17 +79,14 @@ And Update both maven projects.
 
 - Change the url of image in Email.java so that header image goes while sending the mail.
 
+
 ### Important!- Once a product is added you need to refresh the images folder in the IDE for it to show images on the web-browser.
 
-## Changelog as of 20-06-2019
+## Changelog as of 27-02-2021
 
-- Url created base on the Category for better sorting and performance of products list.
+-Under the hood improvements.
 
-- Images are deleted as the product gets deleted previously it used to just collect images.
-
-- Change of project name from Yaruis to Yarish.
- 
-- Under the hood improvements.
+-Got the project working with the new h2 version.
 
 ## Upcoming Ideas! (Not surely coming!)
 
